@@ -2,1967 +2,1263 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#103b50">
-<title>Zanzibar Horizon | National Education Platform</title>
-<meta name="description" content="Zanzibar Horizon: an independent inclusive education, research and community development initiative, beginning in Pemba and designed for all 31 regions of Tanzania.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102d40">
+<meta name="description" content="Zanzibar Horizon is an independent initiative advancing inclusive education, research, innovation and community development across Tanzania, beginning in Pemba.">
+<title>Zanzibar Horizon | Inclusive Education & National Development</title>
 
 <style>
 :root {
- --navy:#103b50;--deep:#092b3d;--teal:#087f83;
- --green:#27835b;--gold:#d8ae5c;--cream:#f4f6f2;
- --white:#fff;--ink:#233b49;--muted:#71828b;
- --line:#e1e8e8;--red:#b94b4b;
+  --navy:#102d40;
+  --navy2:#173e53;
+  --green:#238451;
+  --gold:#d8ad55;
+  --cream:#f5f7f5;
+  --white:#ffffff;
+  --ink:#203442;
+  --muted:#71808a;
+  --line:#e3e9e8;
+  --blue:#28769a;
+  --shadow:0 12px 35px rgba(16,45,64,.09);
+  --radius:16px;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font:14px Arial,sans-serif}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:var(--ink);
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.container{width:min(1160px,92%);margin:auto}
+.topline{height:5px;background:linear-gradient(90deg,var(--green),var(--gold),var(--navy))}
 header{
- position:sticky;top:0;z-index:20;background:var(--deep);color:white;
- min-height:68px;padding:10px 22px;display:flex;align-items:center;
- justify-content:space-between;gap:12px;box-shadow:0 3px 15px #001a2830
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
 }
-.brand{display:flex;align-items:center;gap:12px}
-.logo{height:43px;width:43px;border:2px solid var(--gold);border-radius:50%;
- display:grid;place-items:center;color:var(--gold);font-weight:bold;font-size:17px}
-.brand h1{font-size:16px;letter-spacing:1.3px;margin:0}
-.brand small{display:block;color:#c2d6dc;font-size:9px;margin-top:4px}
-.header-actions{display:flex;gap:8px}
-.layout{display:flex;min-height:calc(100vh - 68px)}
-aside{width:245px;flex-shrink:0;background:var(--navy);color:white;padding:17px 12px}
-.nav-label{font-size:10px;letter-spacing:1.5px;color:#9db6bf;padding:18px 10px 7px}
 .nav{
- width:100%;display:flex;align-items:center;gap:11px;text-align:left;
- border:0;background:transparent;color:#dce8eb;padding:11px;
- border-radius:7px;margin:2px 0;font-size:12px
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
 }
-.nav:hover,.nav.active{background:#24546a;color:white}
-.nav span:first-child{width:20px;text-align:center;font-size:16px}
-main{flex:1;min-width:0;padding:25px;max-width:1600px;margin:auto;width:100%}
-.page{display:none}.page.active{display:block}
+.brand{display:flex;align-items:center;gap:12px;min-width:200px}
+.logo{
+  width:45px;height:45px;border-radius:12px;
+  background:var(--navy);color:white;
+  display:grid;place-items:center;font-size:20px;
+  font-weight:900;border:2px solid var(--gold);
+}
+.brand strong{display:block;color:var(--navy);font-size:18px;letter-spacing:.7px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px}
+.navlinks{display:flex;gap:19px;align-items:center}
+.navlinks a{font-size:12px;font-weight:700;color:var(--navy)}
+.navlinks a:hover{color:var(--green)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.lang-btn,.menu-btn{
+  border:1px solid var(--line);background:white;
+  color:var(--navy);padding:9px 13px;border-radius:9px;font-weight:700;
+}
+.menu-btn{display:none}
 .hero{
- min-height:340px;border-radius:14px;padding:38px;color:white;
- display:flex;flex-direction:column;justify-content:center;
- background:linear-gradient(90deg,#092b3df5,#103b50c9,#103b5060),
- url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85") center/cover;
+  position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#102d40 0%,#174a55 65%,#236b59 100%);
+  color:white;padding:105px 0 90px;
 }
-.hero .eyebrow{color:#f1d28d;letter-spacing:2px;font-size:10px;font-weight:bold}
-.hero h2{font-size:clamp(29px,5vw,48px);line-height:1.15;max-width:730px;margin:15px 0}
-.hero p{max-width:650px;line-height:1.8;color:#e2edf0}
-.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
-.btn{border:0;border-radius:7px;background:var(--teal);color:white;padding:10px 15px;font-weight:bold;font-size:12px}
-.btn:hover{filter:brightness(1.1)}
-.btn.gold{background:var(--gold);color:var(--deep)}
-.btn.light{background:#e8f0ef;color:var(--navy)}
-.btn.dark{background:var(--navy)}
-.btn.red{background:var(--red)}
-.btn.small{padding:7px 10px;font-size:11px}
-.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:5px 0 20px}
-.head h2{margin:0;color:var(--deep);font-size:24px}
-.head p{color:var(--muted);margin:6px 0 0;font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:15px 0}
-.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{background:white;border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}
-.card h3{margin:0 0 10px;color:var(--deep);font-size:15px}
-.card p,.card li{font-size:12px;line-height:1.7;color:#637680}
-.metric{font-size:27px;font-weight:bold;color:var(--deep);margin:8px 0}
-.metric small{display:block;font-size:11px;color:var(--muted);font-weight:normal}
-.module{cursor:pointer;transition:.2s}
-.module:hover{border-color:var(--teal);transform:translateY(-2px)}
-.module .icon{font-size:25px;margin-bottom:10px}
-.section-title{color:var(--deep);font-size:17px;margin:25px 0 12px}
-.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#e9f2ed;color:#28714f;font-size:10px;font-weight:bold}
-.badge.gold{background:#fbf1dc;color:#8b671f}
-.badge.red{background:#f9e8e8;color:#a33c3c}
-.notice{padding:13px 15px;background:#edf5f3;border-left:4px solid var(--green);border-radius:6px;font-size:12px;line-height:1.7;margin:14px 0}
-.notice.warning{background:#fff5e3;border-left-color:var(--gold)}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-input,select,textarea{width:100%;padding:10px;border:1px solid #dce5e5;border-radius:7px;background:white;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid #a7d3c3}
-label{display:block;margin:12px 0 6px;color:#526772;font-weight:bold;font-size:11px}
-textarea{min-height:75px;resize:vertical}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px;background:white}
-table{width:100%;border-collapse:collapse;min-width:620px;font-size:12px}
-th,td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}
-th{background:#edf3f2;color:var(--deep);font-size:10px;text-transform:uppercase}
-tr:last-child td{border-bottom:0}
-.progress{height:8px;background:#e8eeee;border-radius:10px;overflow:hidden}
-.progress span{height:100%;display:block;background:var(--green)}
-.check{display:flex;gap:8px;align-items:flex-start;margin:10px 0;font-size:12px}
-.check input{width:auto}
-.muted{color:var(--muted);font-size:11px}
-footer{text-align:center;padding:28px;color:var(--muted);font-size:10px}
-#toast{display:none;position:fixed;bottom:18px;right:18px;z-index:100;background:var(--deep);color:white;padding:13px 18px;border-radius:8px}
-.mobile-menu{display:none}
-@media(max-width:950px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}aside{width:210px}}
-@media(max-width:650px){
- header{padding:10px}.brand h1{font-size:12px}.brand small{font-size:8px}
- .mobile-menu{display:inline-block}
- aside{display:none;position:fixed;top:65px;bottom:0;left:0;z-index:30;width:265px;overflow:auto}
- aside.open{display:block}
- main{padding:14px}.hero{padding:24px;min-height:350px}
- .grid,.grid.two,.grid.three,.form-grid{grid-template-columns:1fr}
+.hero:before{
+  content:"";position:absolute;width:500px;height:500px;
+  right:-150px;top:-220px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 0 0 45px rgba(255,255,255,.035),
+             0 0 0 90px rgba(255,255,255,.025);
 }
-@media print{header,aside,.no-print,footer{display:none!important}main{padding:0}.page{display:none!important}.page.active{display:block!important}}
+.hero-content{position:relative;max-width:800px}
+.eyebrow{
+  color:#f0d28d;font-size:12px;font-weight:800;
+  letter-spacing:2.4px;text-transform:uppercase;
+}
+.hero h1{
+  font-size:clamp(38px,6vw,67px);
+  line-height:1.08;margin:20px 0;
+  letter-spacing:-1.8px;
+}
+.hero p{font-size:18px;color:#e0e9e8;max-width:720px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 20px;border-radius:9px;font-weight:800;
+  border:1px solid transparent;transition:.2s;
+}
+.btn-primary{background:var(--gold);color:var(--navy)}
+.btn-primary:hover{background:#edca7e;transform:translateY(-2px)}
+.btn-outline{border-color:rgba(255,255,255,.5);color:white}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+.hero-note{margin-top:35px;font-size:12px;color:#d2dfdd}
+section{padding:76px 0}
+.section-head{max-width:760px;margin-bottom:35px}
+.section-head.center{text-align:center;margin:0 auto 38px}
+.kicker{
+  color:var(--green);font-weight:800;
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+}
+h2{color:var(--navy);font-size:clamp(27px,4vw,38px);line-height:1.2;margin:10px 0 15px}
+h3{color:var(--navy);margin:0 0 10px}
+.section-head p,.muted{color:var(--muted)}
+.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.quote-panel{
+  background:var(--navy);color:white;padding:30px;
+  border-radius:var(--radius);border-bottom:5px solid var(--gold);
+}
+.quote-panel p{font-size:21px;line-height:1.5}
+.quote-panel small{color:#c8d7d5}
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:15px;margin-top:35px;
+}
+.stat{
+  background:var(--cream);border:1px solid var(--line);
+  border-radius:13px;padding:22px;text-align:center;
+}
+.stat strong{display:block;font-size:30px;color:var(--green)}
+.stat span{font-size:12px;color:var(--muted)}
+.soft{background:var(--cream)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:white;border:1px solid var(--line);
+  border-radius:var(--radius);padding:25px;
+  box-shadow:0 5px 20px rgba(16,45,64,.035);
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.card-icon{
+  width:46px;height:46px;border-radius:12px;
+  background:#e8f3ed;color:var(--green);
+  display:grid;place-items:center;font-size:22px;margin-bottom:17px;
+}
+.card p{color:var(--muted);font-size:14px;margin-bottom:0}
+.pill{
+  display:inline-block;border-radius:30px;
+  padding:5px 10px;background:#e8f3ed;
+  color:#216744;font-size:10px;font-weight:800;
+}
+.pill.gold{background:#fff3d8;color:#8a641a}
+.pill.blue{background:#e8f1f8;color:#275c80}
+.district-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.district{
+  padding:23px;background:white;border:1px solid var(--line);
+  border-radius:13px;border-top:4px solid var(--green);
+}
+.district strong{display:block;color:var(--navy);font-size:17px}
+.district small{color:var(--muted)}
+.school-panel{
+  background:var(--navy);padding:32px;border-radius:var(--radius);
+  color:white;margin-top:30px;
+}
+.school-panel h3{color:white}
+.school-list{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+.school{
+  background:rgba(255,255,255,.08);padding:17px;
+  border:1px solid rgba(255,255,255,.15);border-radius:10px;
+}
+.school strong{display:block;color:#f0d28d;font-size:19px}
+.school small{color:#d3dfdf;font-size:11px}
+.note{
+  border-left:4px solid var(--gold);background:#fff8e9;
+  padding:15px 18px;border-radius:0 10px 10px 0;
+  color:#66552f;font-size:13px;margin-top:20px;
+}
+.priority-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.priority{
+  padding:22px;border:1px solid var(--line);border-radius:13px;
+  background:white;
+}
+.priority b{color:var(--green);font-size:12px}
+.priority p{font-size:13px;color:var(--muted)}
+.budget-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+.budget-total{
+  background:var(--navy);color:white;padding:30px;
+  border-radius:var(--radius);
+}
+.budget-total strong{display:block;color:var(--gold);font-size:37px;margin:12px 0}
+.budget-row{
+  display:grid;grid-template-columns:1fr auto;
+  gap:15px;padding:14px 0;border-bottom:1px solid var(--line);
+  font-size:13px;
+}
+.budget-row strong{color:var(--navy)}
+.bar{height:7px;background:#e7eeeb;border-radius:10px;overflow:hidden;margin-top:9px}
+.bar span{display:block;height:100%;background:var(--green)}
+.roadmap{position:relative;margin-left:12px}
+.phase{
+  border-left:2px solid #dce7e2;padding:0 0 28px 25px;position:relative;
+}
+.phase:before{
+  content:"";position:absolute;left:-8px;top:3px;
+  width:13px;height:13px;background:var(--green);
+  border:3px solid white;border-radius:50%;
+  box-shadow:0 0 0 1px var(--green);
+}
+.phase strong{color:var(--navy)}
+.phase p{font-size:13px;color:var(--muted);margin:6px 0}
+.region-tools{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+.search{
+  flex:1;min-width:220px;padding:12px 15px;
+  border:1px solid var(--line);border-radius:9px;
+}
+.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.region{
+  border:1px solid var(--line);border-radius:9px;
+  padding:13px;background:white;font-size:13px;
+}
+.region.zanzibar{border-left:4px solid var(--gold);background:#fffcf4}
+.region small{display:block;color:var(--muted);font-size:10px}
+.map-panel{
+  border:1px solid var(--line);background:#f4f7f5;
+  padding:28px;border-radius:var(--radius);margin-top:28px;
+}
+.map-panel h3{margin-bottom:8px}
+.map-placeholder{
+  min-height:170px;display:grid;place-items:center;text-align:center;
+  border:1px dashed #b6c8be;border-radius:12px;padding:25px;
+  background:linear-gradient(135deg,#edf5f0,#e9f0f4);
+}
+.map-placeholder strong{font-size:20px;color:var(--navy)}
+.map-placeholder p{font-size:12px;color:var(--muted);max-width:500px}
+.status-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.status{
+  border:1px solid var(--line);border-radius:12px;padding:20px;
+  background:white;
+}
+.status strong{display:block;font-size:14px;color:var(--navy)}
+.status span{font-size:11px;color:var(--muted)}
+.status .dot{width:9px;height:9px;display:inline-block;border-radius:50%;margin-right:6px}
+.proposed{background:#d7a83f}.assessed{background:#4389b4}
+.active{background:#27834e}.completed{background:#53636d}
+.governance-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.governance-grid .card{height:100%}
+.callout{
+  background:#eaf3ed;padding:28px;border-radius:var(--radius);
+  margin-top:25px;
+}
+.footer{background:#0d2535;color:#d3dfe1;padding:55px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.footer h3{color:white}
+.footer p,.footer a{font-size:13px;color:#b7c9cb}
+.footer a:hover{color:var(--gold)}
+.footer-links{display:grid;gap:8px}
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:35px;padding-top:20px;font-size:11px;color:#9fb2b5;
+}
+.backtop{
+  position:fixed;right:18px;bottom:18px;
+  background:var(--green);color:white;border:0;
+  width:43px;height:43px;border-radius:50%;font-size:19px;
+  box-shadow:var(--shadow);
+}
+.hidden{display:none!important}
+@media(max-width:950px){
+  .navlinks{
+    display:none;position:absolute;top:76px;left:0;right:0;
+    background:white;padding:20px 5%;border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:flex-start;gap:15px;
+  }
+  .navlinks.open{display:flex}
+  .menu-btn{display:block}
+  .intro-grid,.budget-wrap{grid-template-columns:1fr}
+  .cards,.priority-grid{grid-template-columns:repeat(2,1fr)}
+  .district-grid{grid-template-columns:repeat(2,1fr)}
+  .school-list{grid-template-columns:repeat(2,1fr)}
+  .region-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  section{padding:55px 0}
+  .hero{padding:75px 0}
+  .hero h1{font-size:40px}
+  .hero p{font-size:15px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cards,.priority-grid,.governance-grid{grid-template-columns:1fr}
+  .district-grid{grid-template-columns:1fr 1fr}
+  .school-list{grid-template-columns:1fr 1fr}
+  .region-grid{grid-template-columns:repeat(2,1fr)}
+  .status-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .brand{min-width:0}
+  .brand strong{font-size:15px}
+  .brand small{font-size:8px}
+}
 </style>
 </head>
+
 <body>
+<div class="topline"></div>
+
 <header>
- <div class="brand">
-  <div class="logo">ZH</div>
-  <div><h1>ZANZIBAR HORIZON</h1><small>INCLUSIVE EDUCATION & COMMUNITY DEVELOPMENT</small></div>
- </div>
- <div class="header-actions">
-  <button class="btn light mobile-menu" onclick="toggleMenu()">☰</button>
-  <button class="btn light" onclick="toggleLanguage()" id="languageButton">Kiswahili</button>
-  <button class="btn gold" onclick="showPage('dashboard')">Command Centre</button>
- </div>
+<div class="container nav">
+  <a href="#home" class="brand" aria-label="Zanzibar Horizon home">
+    <div class="logo">ZH</div>
+    <div>
+      <strong>ZANZIBAR HORIZON</strong>
+      <small>EDUCATION • INCLUSION • DEVELOPMENT</small>
+    </div>
+  </a>
+
+  <nav class="navlinks" id="navlinks">
+    <a href="#about" data-i="navAbout">About</a>
+    <a href="#priorities" data-i="navPriorities">Our Priorities</a>
+    <a href="#pemba" data-i="navPemba">Pemba Pilot</a>
+    <a href="#national" data-i="navNational">National Vision</a>
+    <a href="#budget" data-i="navBudget">Budget</a>
+    <a href="#governance" data-i="navGovernance">Governance</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="lang-btn" id="langBtn" type="button">KIS</button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation">☰</button>
+  </div>
+</div>
 </header>
-<div class="layout">
-<aside id="sidebar">
- <div class="nav-label">MAIN NAVIGATION</div>
- <button class="nav active" data-page="home" onclick="showPage('home')"><span>⌂</span> Home</button>
- <button class="nav" data-page="dashboard" onclick="showPage('dashboard')"><span>▦</span> National Dashboard</button>
- <button class="nav" data-page="regions" onclick="showPage('regions')"><span>🌍</span> 31 Regions</button>
-
- <div class="nav-label">PEMBA DEMONSTRATION</div>
- <button class="nav" data-page="pemba" onclick="showPage('pemba')"><span>🏝</span> Pemba Programme</button>
- <button class="nav" data-page="schools" onclick="showPage('schools')"><span>🏫</span> Five-School Register</button>
- <button class="nav" data-page="inspection" onclick="showPage('inspection')"><span>✓</span> School Inspection</button>
- <button class="nav" data-page="selection" onclick="showPage('selection')"><span>⚖</span> School Selection Matrix</button>
-
- <div class="nav-label">RESEARCH & INCLUSION</div>
- <button class="nav" data-page="research" onclick="showPage('research')"><span>🔎</span> Research Framework</button>
- <button class="nav" data-page="interviews" onclick="showPage('interviews')"><span>👤</span> Head Teacher Interview</button>
- <button class="nav" data-page="teachers" onclick="showPage('teachers')"><span>📋</span> Teacher Questionnaire</button>
- <button class="nav" data-page="parents" onclick="showPage('parents')"><span>👨‍👩‍👧</span> Parent Consultation</button>
- <button class="nav" data-page="learners" onclick="showPage('learners')"><span>📚</span> Learner Participation</button>
- <button class="nav" data-page="disability" onclick="showPage('disability')"><span>♿</span> Disability Inclusion</button>
- <button class="nav" data-page="baseline" onclick="showPage('baseline')"><span>📊</span> Learning Baseline</button>
-
- <div class="nav-label">PROGRAMME MANAGEMENT</div>
- <button class="nav" data-page="budget" onclick="showPage('budget')"><span>₮</span> Budget & Finance</button>
- <button class="nav" data-page="coordination" onclick="showPage('coordination')"><span>🤝</span> Programme Coordination</button>
- <button class="nav" data-page="safeguarding" onclick="showPage('safeguarding')"><span>🛡</span> Safeguarding</button>
- <button class="nav" data-page="monitoring" onclick="showPage('monitoring')"><span>📈</span> Monitoring & Evaluation</button>
- <button class="nav" data-page="reports" onclick="showPage('reports')"><span>📑</span> Reports & Exports</button>
- <button class="nav" data-page="settings" onclick="showPage('settings')"><span>⚙</span> Data & Settings</button>
-</aside>
 
 <main>
-<section class="page active" id="page-home">
- <div class="hero">
-  <div class="eyebrow">INDEPENDENT INITIATIVE · ZANZIBAR · TANZANIA</div>
-  <h2>Every Child Deserves the Opportunity to Learn, Participate and Thrive.</h2>
-  <p>Zanzibar Horizon is an independent initiative advancing inclusive education, research, innovation and community development. Beginning in Pemba, our national architecture is designed to support independently assessed programmes across all 31 regions of Tanzania.</p>
-  <div class="hero-actions">
-   <button class="btn gold" onclick="showPage('pemba')">Explore Pemba Demonstration →</button>
-   <button class="btn light" onclick="showPage('dashboard')">National Dashboard</button>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content">
+  <div class="eyebrow" data-i="heroEyebrow">An independent education and development initiative</div>
+  <h1 data-i="heroTitle">A New Horizon for Inclusive Education.</h1>
+  <p data-i="heroText">
+    Advancing equal educational opportunity, inclusive schools,
+    accessible learning environments and community development
+    across Tanzania, beginning in Pemba.
+  </p>
+  <div class="hero-buttons">
+    <a href="#pemba" class="btn btn-primary" data-i="heroButton1">Explore the Pemba Pilot</a>
+    <a href="#about" class="btn btn-outline" data-i="heroButton2">Discover Our Vision</a>
   </div>
- </div>
-
- <div class="grid">
-  <div class="card"><div>🌍</div><div class="metric">31</div><div class="muted">Regional planning structure</div></div>
-  <div class="card"><div>🏝</div><div class="metric">4</div><div class="muted">Pemba districts</div></div>
-  <div class="card"><div>🏫</div><div class="metric">5</div><div class="muted">Proposed demonstration schools</div></div>
-  <div class="card"><div>₮</div><div class="metric">50M</div><div class="muted">Indicative TSh pilot budget</div></div>
- </div>
-
- <h3 class="section-title">Explore the platform</h3>
- <div class="grid three">
-  <div class="card module" onclick="showPage('research')"><div class="icon">🔎</div><h3>Needs Assessment</h3><p>Research, interviews, inspections and community consultation.</p></div>
-  <div class="card module" onclick="showPage('disability')"><div class="icon">♿</div><h3>Inclusive Education</h3><p>Accessibility, disability inclusion and assistive technology.</p></div>
-  <div class="card module" onclick="showPage('baseline')"><div class="icon">📊</div><h3>Learning Baseline</h3><p>Attendance, retention, literacy and numeracy indicators.</p></div>
-  <div class="card module" onclick="showPage('budget')"><div class="icon">💰</div><h3>Financial Accountability</h3><p>Indicative allocations, expenditure records and exports.</p></div>
-  <div class="card module" onclick="showPage('safeguarding')"><div class="icon">🛡</div><h3>Safeguarding</h3><p>Consent, child protection, privacy and referral protocols.</p></div>
-  <div class="card module" onclick="showPage('reports')"><div class="icon">📑</div><h3>Reporting</h3><p>Research records, programme reports and data exports.</p></div>
- </div>
-
- <div class="notice warning"><b>Evidence integrity:</b> The five schools have not yet been identified or verified. Current statistics, beneficiary numbers, approvals, partnerships and outcomes must not be invented or presented as confirmed.</div>
- <div class="card"><h3>Our guiding principle</h3><p>Evidence before intervention. Dignity before classification. Collaboration before duplication. Transparency throughout implementation.</p></div>
-</section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#103b50">
-<title>Zanzibar Horizon | National Education Platform</title>
-<meta name="description" content="Zanzibar Horizon: an independent inclusive education, research and community development initiative, beginning in Pemba and designed for all 31 regions of Tanzania.">
-
-<style>
-:root {
- --navy:#103b50;--deep:#092b3d;--teal:#087f83;
- --green:#27835b;--gold:#d8ae5c;--cream:#f4f6f2;
- --white:#fff;--ink:#233b49;--muted:#71828b;
- --line:#e1e8e8;--red:#b94b4b;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font:14px Arial,sans-serif}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-header{
- position:sticky;top:0;z-index:20;background:var(--deep);color:white;
- min-height:68px;padding:10px 22px;display:flex;align-items:center;
- justify-content:space-between;gap:12px;box-shadow:0 3px 15px #001a2830
-}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{height:43px;width:43px;border:2px solid var(--gold);border-radius:50%;
- display:grid;place-items:center;color:var(--gold);font-weight:bold;font-size:17px}
-.brand h1{font-size:16px;letter-spacing:1.3px;margin:0}
-.brand small{display:block;color:#c2d6dc;font-size:9px;margin-top:4px}
-.header-actions{display:flex;gap:8px}
-.layout{display:flex;min-height:calc(100vh - 68px)}
-aside{width:245px;flex-shrink:0;background:var(--navy);color:white;padding:17px 12px}
-.nav-label{font-size:10px;letter-spacing:1.5px;color:#9db6bf;padding:18px 10px 7px}
-.nav{
- width:100%;display:flex;align-items:center;gap:11px;text-align:left;
- border:0;background:transparent;color:#dce8eb;padding:11px;
- border-radius:7px;margin:2px 0;font-size:12px
-}
-.nav:hover,.nav.active{background:#24546a;color:white}
-.nav span:first-child{width:20px;text-align:center;font-size:16px}
-main{flex:1;min-width:0;padding:25px;max-width:1600px;margin:auto;width:100%}
-.page{display:none}.page.active{display:block}
-.hero{
- min-height:340px;border-radius:14px;padding:38px;color:white;
- display:flex;flex-direction:column;justify-content:center;
- background:linear-gradient(90deg,#092b3df5,#103b50c9,#103b5060),
- url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85") center/cover;
-}
-.hero .eyebrow{color:#f1d28d;letter-spacing:2px;font-size:10px;font-weight:bold}
-.hero h2{font-size:clamp(29px,5vw,48px);line-height:1.15;max-width:730px;margin:15px 0}
-.hero p{max-width:650px;line-height:1.8;color:#e2edf0}
-.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
-.btn{border:0;border-radius:7px;background:var(--teal);color:white;padding:10px 15px;font-weight:bold;font-size:12px}
-.btn:hover{filter:brightness(1.1)}
-.btn.gold{background:var(--gold);color:var(--deep)}
-.btn.light{background:#e8f0ef;color:var(--navy)}
-.btn.dark{background:var(--navy)}
-.btn.red{background:var(--red)}
-.btn.small{padding:7px 10px;font-size:11px}
-.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:5px 0 20px}
-.head h2{margin:0;color:var(--deep);font-size:24px}
-.head p{color:var(--muted);margin:6px 0 0;font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:15px 0}
-.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{background:white;border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}
-.card h3{margin:0 0 10px;color:var(--deep);font-size:15px}
-.card p,.card li{font-size:12px;line-height:1.7;color:#637680}
-.metric{font-size:27px;font-weight:bold;color:var(--deep);margin:8px 0}
-.metric small{display:block;font-size:11px;color:var(--muted);font-weight:normal}
-.module{cursor:pointer;transition:.2s}
-.module:hover{border-color:var(--teal);transform:translateY(-2px)}
-.module .icon{font-size:25px;margin-bottom:10px}
-.section-title{color:var(--deep);font-size:17px;margin:25px 0 12px}
-.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#e9f2ed;color:#28714f;font-size:10px;font-weight:bold}
-.badge.gold{background:#fbf1dc;color:#8b671f}
-.badge.red{background:#f9e8e8;color:#a33c3c}
-.notice{padding:13px 15px;background:#edf5f3;border-left:4px solid var(--green);border-radius:6px;font-size:12px;line-height:1.7;margin:14px 0}
-.notice.warning{background:#fff5e3;border-left-color:var(--gold)}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-input,select,textarea{width:100%;padding:10px;border:1px solid #dce5e5;border-radius:7px;background:white;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid #a7d3c3}
-label{display:block;margin:12px 0 6px;color:#526772;font-weight:bold;font-size:11px}
-textarea{min-height:75px;resize:vertical}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px;background:white}
-table{width:100%;border-collapse:collapse;min-width:620px;font-size:12px}
-th,td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}
-th{background:#edf3f2;color:var(--deep);font-size:10px;text-transform:uppercase}
-tr:last-child td{border-bottom:0}
-.progress{height:8px;background:#e8eeee;border-radius:10px;overflow:hidden}
-.progress span{height:100%;display:block;background:var(--green)}
-.check{display:flex;gap:8px;align-items:flex-start;margin:10px 0;font-size:12px}
-.check input{width:auto}
-.muted{color:var(--muted);font-size:11px}
-footer{text-align:center;padding:28px;color:var(--muted);font-size:10px}
-#toast{display:none;position:fixed;bottom:18px;right:18px;z-index:100;background:var(--deep);color:white;padding:13px 18px;border-radius:8px}
-.mobile-menu{display:none}
-@media(max-width:950px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}aside{width:210px}}
-@media(max-width:650px){
- header{padding:10px}.brand h1{font-size:12px}.brand small{font-size:8px}
- .mobile-menu{display:inline-block}
- aside{display:none;position:fixed;top:65px;bottom:0;left:0;z-index:30;width:265px;overflow:auto}
- aside.open{display:block}
- main{padding:14px}.hero{padding:24px;min-height:350px}
- .grid,.grid.two,.grid.three,.form-grid{grid-template-columns:1fr}
-}
-@media print{header,aside,.no-print,footer{display:none!important}main{padding:0}.page{display:none!important}.page.active{display:block!important}}
-</style>
-</head>
-<body>
-<header>
- <div class="brand">
-  <div class="logo">ZH</div>
-  <div><h1>ZANZIBAR HORIZON</h1><small>INCLUSIVE EDUCATION & COMMUNITY DEVELOPMENT</small></div>
- </div>
- <div class="header-actions">
-  <button class="btn light mobile-menu" onclick="toggleMenu()">☰</button>
-  <button class="btn light" onclick="toggleLanguage()" id="languageButton">Kiswahili</button>
-  <button class="btn gold" onclick="showPage('dashboard')">Command Centre</button>
- </div>
-</header>
-<div class="layout">
-<aside id="sidebar">
- <div class="nav-label">MAIN NAVIGATION</div>
- <button class="nav active" data-page="home" onclick="showPage('home')"><span>⌂</span> Home</button>
- <button class="nav" data-page="dashboard" onclick="showPage('dashboard')"><span>▦</span> National Dashboard</button>
- <button class="nav" data-page="regions" onclick="showPage('regions')"><span>🌍</span> 31 Regions</button>
-
- <div class="nav-label">PEMBA DEMONSTRATION</div>
- <button class="nav" data-page="pemba" onclick="showPage('pemba')"><span>🏝</span> Pemba Programme</button>
- <button class="nav" data-page="schools" onclick="showPage('schools')"><span>🏫</span> Five-School Register</button>
- <button class="nav" data-page="inspection" onclick="showPage('inspection')"><span>✓</span> School Inspection</button>
- <button class="nav" data-page="selection" onclick="showPage('selection')"><span>⚖</span> School Selection Matrix</button>
-
- <div class="nav-label">RESEARCH & INCLUSION</div>
- <button class="nav" data-page="research" onclick="showPage('research')"><span>🔎</span> Research Framework</button>
- <button class="nav" data-page="interviews" onclick="showPage('interviews')"><span>👤</span> Head Teacher Interview</button>
- <button class="nav" data-page="teachers" onclick="showPage('teachers')"><span>📋</span> Teacher Questionnaire</button>
- <button class="nav" data-page="parents" onclick="showPage('parents')"><span>👨‍👩‍👧</span> Parent Consultation</button>
- <button class="nav" data-page="learners" onclick="showPage('learners')"><span>📚</span> Learner Participation</button>
- <button class="nav" data-page="disability" onclick="showPage('disability')"><span>♿</span> Disability Inclusion</button>
- <button class="nav" data-page="baseline" onclick="showPage('baseline')"><span>📊</span> Learning Baseline</button>
-
- <div class="nav-label">PROGRAMME MANAGEMENT</div>
- <button class="nav" data-page="budget" onclick="showPage('budget')"><span>₮</span> Budget & Finance</button>
- <button class="nav" data-page="coordination" onclick="showPage('coordination')"><span>🤝</span> Programme Coordination</button>
- <button class="nav" data-page="safeguarding" onclick="showPage('safeguarding')"><span>🛡</span> Safeguarding</button>
- <button class="nav" data-page="monitoring" onclick="showPage('monitoring')"><span>📈</span> Monitoring & Evaluation</button>
- <button class="nav" data-page="reports" onclick="showPage('reports')"><span>📑</span> Reports & Exports</button>
- <button class="nav" data-page="settings" onclick="showPage('settings')"><span>⚙</span> Data & Settings</button>
-</aside>
-
-<main>
-<section class="page active" id="page-home">
- <div class="hero">
-  <div class="eyebrow">INDEPENDENT INITIATIVE · ZANZIBAR · TANZANIA</div>
-  <h2>Every Child Deserves the Opportunity to Learn, Participate and Thrive.</h2>
-  <p>Zanzibar Horizon is an independent initiative advancing inclusive education, research, innovation and community development. Beginning in Pemba, our national architecture is designed to support independently assessed programmes across all 31 regions of Tanzania.</p>
-  <div class="hero-actions">
-   <button class="btn gold" onclick="showPage('pemba')">Explore Pemba Demonstration →</button>
-   <button class="btn light" onclick="showPage('dashboard')">National Dashboard</button>
+  <div class="hero-note" data-i="heroNote">
+    Independent initiative • Evidence-led planning • Community-centred development
   </div>
- </div>
-
- <div class="grid">
-  <div class="card"><div>🌍</div><div class="metric">31</div><div class="muted">Regional planning structure</div></div>
-  <div class="card"><div>🏝</div><div class="metric">4</div><div class="muted">Pemba districts</div></div>
-  <div class="card"><div>🏫</div><div class="metric">5</div><div class="muted">Proposed demonstration schools</div></div>
-  <div class="card"><div>₮</div><div class="metric">50M</div><div class="muted">Indicative TSh pilot budget</div></div>
- </div>
-
- <h3 class="section-title">Explore the platform</h3>
- <div class="grid three">
-  <div class="card module" onclick="showPage('research')"><div class="icon">🔎</div><h3>Needs Assessment</h3><p>Research, interviews, inspections and community consultation.</p></div>
-  <div class="card module" onclick="showPage('disability')"><div class="icon">♿</div><h3>Inclusive Education</h3><p>Accessibility, disability inclusion and assistive technology.</p></div>
-  <div class="card module" onclick="showPage('baseline')"><div class="icon">📊</div><h3>Learning Baseline</h3><p>Attendance, retention, literacy and numeracy indicators.</p></div>
-  <div class="card module" onclick="showPage('budget')"><div class="icon">💰</div><h3>Financial Accountability</h3><p>Indicative allocations, expenditure records and exports.</p></div>
-  <div class="card module" onclick="showPage('safeguarding')"><div class="icon">🛡</div><h3>Safeguarding</h3><p>Consent, child protection, privacy and referral protocols.</p></div>
-  <div class="card module" onclick="showPage('reports')"><div class="icon">📑</div><h3>Reporting</h3><p>Research records, programme reports and data exports.</p></div>
- </div>
-
- <div class="notice warning"><b>Evidence integrity:</b> The five schools have not yet been identified or verified. Current statistics, beneficiary numbers, approvals, partnerships and outcomes must not be invented or presented as confirmed.</div>
- <div class="card"><h3>Our guiding principle</h3><p>Evidence before intervention. Dignity before classification. Collaboration before duplication. Transparency throughout implementation.</p></div>
+</div>
 </section>
-<section class="page" id="page-dashboard">
- <div class="head"><div><h2>National Command Dashboard</h2><p>National planning and programme oversight.</p></div></div>
- <div class="grid">
-  <div class="card"><div class="metric">31</div><div class="muted">Regional records planned</div></div>
-  <div class="card"><div class="metric" id="dashSchools">0</div><div class="muted">Candidate school records</div></div>
-  <div class="card"><div class="metric" id="dashAssessments">0</div><div class="muted">Saved assessment records</div></div>
-  <div class="card"><div class="metric" id="dashSpent">0</div><div class="muted">Recorded spending (TSh)</div></div>
- </div>
- <div class="grid two">
-  <div class="card"><h3>Implementation sequence</h3>
-   <p><b>Phase 1:</b> Pemba needs assessment and proposed five-school demonstration.</p>
-   <p><b>Phase 2:</b> Independently assessed regional programmes.</p>
-   <p><b>National architecture:</b> 31 regional planning records.</p>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+  <div class="intro-grid">
+    <div class="section-head">
+      <div class="kicker" data-i="aboutKicker">Who We Are</div>
+      <h2 data-i="aboutTitle">Education is the foundation of an inclusive society.</h2>
+      <p data-i="aboutText1">
+        Zanzibar Horizon is an independent initiative designed to advance
+        education access, inclusive learning, research, innovation and
+        sustainable community development.
+      </p>
+      <p data-i="aboutText2">
+        Our approach begins with understanding the realities of schools
+        and communities, identifying barriers, developing practical
+        interventions and measuring results.
+      </p>
+      <p data-i="aboutText3">
+        Pemba provides the initial demonstration setting. The long-term
+        architecture is designed to support independently assessed
+        programmes across all 31 regions of Tanzania.
+      </p>
+    </div>
+    <div class="quote-panel">
+      <div class="eyebrow" data-i="principleLabel">Our Guiding Principle</div>
+      <p data-i="principleQuote">
+        Every child deserves the opportunity to learn, participate,
+        develop and fulfil their potential.
+      </p>
+      <small data-i="principleNote">Inclusion must be demonstrated through practical action.</small>
+    </div>
   </div>
-  <div class="card"><h3>Programme status</h3>
-   <p><span class="badge gold">PROPOSED</span> Planning and preparation.</p>
-   <p><span class="badge">ASSESSED</span> Requires verified research.</p>
-   <p><span class="badge">ACTIVE</span> Requires documented approval and commencement.</p>
-   <p><span class="badge">COMPLETED</span> Requires verified completion evidence.</p>
+
+  <div class="stats">
+    <div class="stat"><strong>31</strong><span data-i="statRegions">National regions in the programme architecture</span></div>
+    <div class="stat"><strong>5</strong><span data-i="statSchools">Proposed Pemba demonstration schools</span></div>
+    <div class="stat"><strong>12</strong><span data-i="statMonths">Proposed pilot months</span></div>
+    <div class="stat"><strong>50M</strong><span data-i="statBudget">Indicative TSh pilot budget</span></div>
   </div>
- </div>
- <div class="notice warning">The dashboard starts without invented programme results. Figures will change as records are entered.</div>
+</div>
 </section>
 
-<section class="page" id="page-regions">
- <div class="head"><div><h2>National Regional Register</h2><p>Regional assessment and budget records are maintained separately.</p></div></div>
- <input id="regionSearch" placeholder="Search region..." oninput="renderRegions()">
- <div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>No.</th><th>Region</th><th>Zone</th><th>Status</th><th>Action</th></tr></thead><tbody id="regionTable"></tbody></table></div>
- <div class="notice">This is an administrative planning register. Confirm current official regional classifications before formal publication or reporting.</div>
-</section>
-
-<section class="page" id="page-pemba">
- <div class="head"><div><h2>Pemba Demonstration Programme</h2><p>Proposed 12-month initial implementation phase.</p></div><span class="badge gold">PROPOSED</span></div>
- <div class="grid">
-  <div class="card"><div class="metric">4</div><div class="muted">Districts</div></div>
-  <div class="card"><div class="metric">5</div><div class="muted">Proposed schools</div></div>
-  <div class="card"><div class="metric">12</div><div class="muted">Months</div></div>
-  <div class="card"><div class="metric">50M</div><div class="muted">Indicative TSh budget</div></div>
- </div>
- <h3 class="section-title">Pemba's four districts</h3>
- <div class="grid two" id="districtCards"></div>
- <h3 class="section-title">Proposed implementation calendar</h3>
- <div class="table-wrap"><table><thead><tr><th>Period</th><th>Activity</th><th>Deliverable</th></tr></thead><tbody>
- <tr><td>Months 1–2</td><td>Desk research, permissions, stakeholder mapping</td><td>Research plan and verified school register</td></tr>
- <tr><td>Months 2–3</td><td>Inspections, interviews and baseline</td><td>Five school assessment profiles</td></tr>
- <tr><td>Months 3–4</td><td>Prioritisation and programme design</td><td>Costed plans and selection rationale</td></tr>
- <tr><td>Months 4–9</td><td>Approved interventions and teacher support</td><td>Implementation and monitoring records</td></tr>
- <tr><td>Months 10–11</td><td>Follow-up and evaluation</td><td>Endline evidence</td></tr>
- <tr><td>Month 12</td><td>Final review and reporting</td><td>Donor report and next-phase plan</td></tr>
- </tbody></table></div>
- <div class="hero-actions"><button class="btn" onclick="showPage('schools')">Open School Register</button><button class="btn light" onclick="showPage('budget')">Open Budget</button></div>
-</section>
-
-<section class="page" id="page-schools">
- <div class="head"><div><h2>Five-School Candidate Register</h2><p>Enter only school identities that can be verified.</p></div></div>
- <div class="notice warning">These are five proposed places in the demonstration, not five already confirmed schools.</div>
- <div class="card">
-  <h3>Register candidate school</h3>
-  <form id="schoolForm">
-   <div class="form-grid">
-    <div><label>Official school name</label><input name="name" required></div>
-    <div><label>District</label><select name="district" required><option value="">Select</option><option>Micheweni</option><option>Mkoani</option><option>Wete</option><option>Chake Chake</option></select></div>
-    <div><label>School registration reference</label><input name="reference"></div>
-    <div><label>Ward / location</label><input name="location"></div>
-    <div><label>Verification status</label><select name="verification"><option>Unverified</option><option>Field verified</option><option>Official record checked</option></select></div>
-    <div><label>Verification date</label><input name="date" type="date"></div>
-   </div>
-   <label>Evidence and notes</label><textarea name="notes"></textarea>
-   <button class="btn">Save candidate school</button>
-  </form>
- </div>
- <h3 class="section-title">Saved candidate schools</h3>
- <div class="table-wrap"><table><thead><tr><th>School</th><th>District</th><th>Verification</th><th>Action</th></tr></thead><tbody id="schoolTable"></tbody></table></div>
-</section>
-
-<section class="page" id="page-inspection">
- <div class="head"><div><h2>School Inspection Checklist</h2><p>Field tool covering infrastructure, safety, WASH and learning resources.</p></div></div>
- <div class="card"><form id="inspectionForm">
-  <label>School name or reference</label><input name="school" required>
-  <label>Inspection date</label><input name="date" type="date">
-  <div id="inspectionQuestions"></div>
-  <label>Inspector observations</label><textarea name="notes"></textarea>
-  <label>Priority actions</label><textarea name="actions"></textarea>
-  <button class="btn">Save inspection</button>
- </form></div>
- <h3 class="section-title">Saved inspections</h3>
- <div class="table-wrap"><table><thead><tr><th>School</th><th>Date</th><th>Notes</th><th>Action</th></tr></thead><tbody id="inspectionTable"></tbody></table></div>
-</section>
-
-<section class="page" id="page-selection">
- <div class="head"><div><h2>Transparent School Selection Matrix</h2><p>Score each criterion from 0 to 5, supported by evidence.</p></div></div>
- <div class="notice">A high score cannot override serious unresolved safeguarding risks. Do not discriminate against schools or learners because of disability or poverty.</div>
- <div class="card">
-  <form id="selectionForm">
-   <label>Candidate school</label><input name="school" required>
-   <div id="selectionQuestions"></div>
-   <label>Evidence source and selection rationale</label><textarea name="evidence"></textarea>
-   <label>Safeguarding risks resolved?</label><select name="safety"><option>No - further action required</option><option>Yes - verified</option><option>Not yet assessed</option></select>
-   <button class="btn">Calculate and save score</button>
-  </form>
- </div>
- <div class="card"><h3>Scoring formula</h3><p>Total score = Sum of (criterion score ÷ 5 × criterion weight). Maximum score: 100.</p></div>
- <div class="table-wrap"><table><thead><tr><th>School</th><th>Score / 100</th><th>Safety status</th><th>Action</th></tr></thead><tbody id="selectionTable"></tbody></table></div>
-</section>
-<section class="page" id="page-research">
- <div class="head"><div><h2>Pemba Needs Assessment & Baseline Research</h2><p>Practical donor-ready research framework.</p></div></div>
- <div class="grid two">
-  <div class="card"><h3>School inspection</h3><p>Classrooms, safety, desks, WASH, accessibility, learning materials and infrastructure condition.</p><button class="btn small" onclick="showPage('inspection')">Open checklist</button></div>
-  <div class="card"><h3>Head-teacher interview</h3><p>Enrolment, attendance, staffing, teaching, facilities, learning barriers and existing support.</p><button class="btn small" onclick="showPage('interviews')">Open interview</button></div>
-  <div class="card"><h3>Teacher questionnaire</h3><p>Workload, inclusive teaching, specialist support, foundational learning and resources.</p><button class="btn small" onclick="showPage('teachers')">Open questionnaire</button></div>
-  <div class="card"><h3>Parent consultation</h3><p>Access barriers, costs, safety, transport, disability inclusion and community priorities.</p><button class="btn small" onclick="showPage('parents')">Open consultation</button></div>
-  <div class="card"><h3>Learner participation</h3><p>Safe, voluntary and age-appropriate learner views and experiences.</p><button class="btn small" onclick="showPage('learners')">Open learner tool</button></div>
-  <div class="card"><h3>Disability assessment</h3><p>Physical, communication, learning and assistive-technology needs.</p><button class="btn small" onclick="showPage('disability')">Open assessment</button></div>
- </div>
- <h3 class="section-title">Information to request from education authorities</h3>
- <div class="card"><ul>
-  <li>Current official primary-school register, school codes and locations.</li>
-  <li>Enrolment by school, grade, age and sex, with lawful privacy protections.</li>
-  <li>Attendance, repetition, transfer, dropout, retention and completion records.</li>
-  <li>Teacher establishment, qualifications, vacancies and deployment.</li>
-  <li>Disability and special education data where lawfully available.</li>
-  <li>Infrastructure, WASH, safety and accessibility records.</li>
-  <li>Literacy and numeracy assessment results, with definitions and dates.</li>
-  <li>Existing government and NGO programmes, their coverage and duration.</li>
-  <li>Research permissions, school access requirements and safeguarding pathways.</li>
- </ul></div>
- <h3 class="section-title">Evidence classification</h3>
- <div class="grid three">
-  <div class="card"><span class="badge">VERIFIED</span><p>Supported by current official documentation or documented field verification.</p></div>
-  <div class="card"><span class="badge gold">HISTORICAL</span><p>Previously published information, clearly dated and not presented as current.</p></div>
-  <div class="card"><span class="badge red">ASSUMPTION</span><p>Planning estimates or hypotheses awaiting validation.</p></div>
- </div>
-</section>
-
-<section class="page" id="page-interviews">
- <div class="head"><div><h2>Head-Teacher Interview Guide</h2><p>Record responses without unnecessary personal information.</p></div></div>
- <div class="card"><form id="headForm">
-  <label>School reference</label><input name="school" required>
-  <label>Interview date</label><input name="date" type="date">
-  <div id="headQuestions"></div>
-  <button class="btn">Save interview</button>
- </form></div>
-</section>
-
-<section class="page" id="page-teachers">
- <div class="head"><div><h2>Teacher Questionnaire</h2><p>Use anonymous teacher reference codes.</p></div></div>
- <div class="card"><form id="teacherForm">
-  <label>School reference</label><input name="school" required>
-  <label>Anonymous teacher code</label><input name="code">
-  <div id="teacherQuestions"></div>
-  <button class="btn">Save questionnaire</button>
- </form></div>
-</section>
-
-<section class="page" id="page-parents">
- <div class="head"><div><h2>Parent & Caregiver Consultation</h2><p>Voluntary consultation in an accessible language.</p></div></div>
- <div class="card"><form id="parentForm">
-  <label>School / community reference</label><input name="reference">
-  <label>Consultation date</label><input name="date" type="date">
-  <div id="parentQuestions"></div>
-  <button class="btn">Save consultation</button>
- </form></div>
-</section>
-
-<section class="page" id="page-learners">
- <div class="head"><div><h2>Ethical Learner Participation</h2></div></div>
- <div class="notice warning">Obtain required parent or guardian permission and the child's age-appropriate assent. Participation is voluntary. If a child declines, stop. Never publish identifying information.</div>
- <div class="card"><form id="learnerForm">
-  <label>Anonymous learner code</label><input name="code" required>
-  <label>School reference</label><input name="school" required>
-  <label>Age band</label><select name="age"><option>Under 6</option><option>6–8</option><option>9–11</option><option>12–14</option><option>15 and above</option></select>
-  <label>Consent and assent status</label><select name="consent"><option>Not obtained - do not proceed</option><option>Guardian permission and child assent confirmed</option><option>Child declined</option></select>
-  <div id="learnerQuestions"></div>
-  <label>Non-identifying observations</label><textarea name="notes"></textarea>
-  <button class="btn">Save participation record</button>
- </form></div>
-</section>
-
-<section class="page" id="page-disability">
- <div class="head"><div><h2>Disability Inclusion & Assistive Technology</h2><p>Identify barriers and reasonable accommodation requirements.</p></div></div>
- <div class="notice">Do not diagnose learners. Respect privacy, dignity and the preferences of the learner and family. Seek appropriate specialist advice.</div>
- <div class="card"><form id="disabilityForm">
-  <label>School reference</label><input name="school" required>
-  <label>Assessment date</label><input type="date" name="date">
-  <div id="disabilityQuestions"></div>
-  <label>Accommodation requirements</label><textarea name="accommodations"></textarea>
-  <label>Specialist advice required</label><textarea name="specialist"></textarea>
-  <button class="btn">Save inclusion assessment</button>
- </form></div>
-</section>
-
-<section class="page" id="page-baseline">
- <div class="head"><div><h2>Attendance, Retention, Literacy & Numeracy</h2><p>Record baseline indicators with a source and reference period.</p></div></div>
- <div class="grid two">
-  <div class="card"><h3>Attendance rate</h3><p>Days present ÷ possible attendance days × 100.</p></div>
-  <div class="card"><h3>Retention</h3><p>Members of a starting cohort remaining in the defined follow-up cohort, using a consistent definition.</p></div>
-  <div class="card"><h3>Literacy</h3><p>Age- and grade-appropriate reading, decoding, accuracy and comprehension measures.</p></div>
-  <div class="card"><h3>Numeracy</h3><p>Number recognition, counting, operations, place value and problem-solving measures.</p></div>
- </div>
- <div class="card"><h3>Enter baseline measurement</h3><form id="baselineForm">
-  <div class="form-grid">
-   <div><label>School</label><input name="school" required></div>
-   <div><label>Indicator</label><select name="indicator"><option>Attendance rate</option><option>Retention rate</option><option>Literacy</option><option>Numeracy</option><option>Enrolment</option><option>Completion</option></select></div>
-   <div><label>Value</label><input type="number" step="0.01" name="value" required></div>
-   <div><label>Unit</label><input name="unit" placeholder="% / score / learners"></div>
-   <div><label>Reference period</label><input name="period"></div>
-   <div><label>Evidence status</label><select name="status"><option>Unverified</option><option>Field verified</option><option>Official record verified</option></select></div>
+<!-- VISION -->
+<section class="soft" id="vision">
+<div class="container">
+  <div class="section-head center">
+    <div class="kicker" data-i="visionKicker">Our Vision</div>
+    <h2 data-i="visionTitle">A national framework built on local realities.</h2>
+    <p data-i="visionText">
+      We seek to connect school-level evidence, inclusive education,
+      community participation and accountable programme delivery.
+    </p>
   </div>
-  <label>Source and methodology</label><textarea name="source"></textarea>
-  <button class="btn">Save baseline</button>
- </form></div>
- <div class="table-wrap"><table><thead><tr><th>School</th><th>Indicator</th><th>Value</th><th>Period</th><th>Status</th><th>Action</th></tr></thead><tbody id="baselineTable"></tbody></table></div>
-</section>
-<!-- =====================================================
-     PART 5 OF 6 — REPORTING AND PERFORMANCE
-===================================================== -->
 
-<section class="page" id="page-reports">
- <div class="section-heading">
-  <div>
-   <span class="eyebrow">REPORTING AND ACCOUNTABILITY</span>
-   <h2>Institutional Reports</h2>
-   <p>Generate structured reports for institutional planning, oversight and decision-making.</p>
+  <div class="cards">
+    <article class="card">
+      <div class="card-icon">◎</div>
+      <h3 data-i="visionCard1">Equal Opportunity</h3>
+      <p data-i="visionCard1Text">Reduce barriers that prevent children from accessing, attending and participating in quality education.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">♿</div>
+      <h3 data-i="visionCard2">Inclusive Schools</h3>
+      <p data-i="visionCard2Text">Promote accessible facilities, inclusive teaching practices and appropriate learning support.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">⌕</div>
+      <h3 data-i="visionCard3">Evidence and Research</h3>
+      <p data-i="visionCard3Text">Use reliable assessments, transparent indicators and documented findings to guide decisions.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">✦</div>
+      <h3 data-i="visionCard4">Innovation</h3>
+      <p data-i="visionCard4Text">Explore practical technology, assistive tools and learning solutions appropriate to local needs.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">⌂</div>
+      <h3 data-i="visionCard5">Community Participation</h3>
+      <p data-i="visionCard5Text">Recognise families, educators, children and persons with disabilities as important participants.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">◈</div>
+      <h3 data-i="visionCard6">Accountability</h3>
+      <p data-i="visionCard6Text">Track resources, implementation, outcomes and challenges through clear reporting.</p>
+    </article>
   </div>
- </div>
-
- <div class="panel">
-  <h3>Report Configuration</h3>
-
-  <form id="reportForm">
-   <div class="form-grid">
-    <div>
-     <label>School / Institution</label>
-     <input name="school" required>
-    </div>
-
-    <div>
-     <label>Report Type</label>
-     <select name="type" required>
-      <option value="">Select report</option>
-      <option>Institutional Performance</option>
-      <option>Academic Performance</option>
-      <option>Enrolment and Attendance</option>
-      <option>Infrastructure Assessment</option>
-      <option>Financial Performance</option>
-      <option>Governance and Compliance</option>
-      <option>School Improvement</option>
-      <option>Comprehensive Institutional Report</option>
-     </select>
-    </div>
-
-    <div>
-     <label>Reporting Period</label>
-     <input name="period" placeholder="e.g. 2026/2027" required>
-    </div>
-
-    <div>
-     <label>Prepared By</label>
-     <input name="preparedBy">
-    </div>
-
-    <div>
-     <label>Report Status</label>
-     <select name="status">
-      <option>Draft</option>
-      <option>Under Review</option>
-      <option>Approved</option>
-     </select>
-    </div>
-   </div>
-
-   <label>Executive Summary</label>
-   <textarea name="summary" required></textarea>
-
-   <label>Key Findings</label>
-   <textarea name="findings"></textarea>
-
-   <label>Recommendations</label>
-   <textarea name="recommendations"></textarea>
-
-   <button class="btn" type="submit">Save Report</button>
-  </form>
- </div>
-
- <div class="panel">
-  <h3>Institutional Report Register</h3>
-  <div class="table-wrap">
-   <table>
-    <thead>
-     <tr>
-      <th>Institution</th>
-      <th>Report Type</th>
-      <th>Period</th>
-      <th>Prepared By</th>
-      <th>Status</th>
-      <th>Action</th>
-     </tr>
-    </thead>
-    <tbody id="reportTable"></tbody>
-   </table>
-  </div>
- </div>
+</div>
 </section>
 
-<!-- =====================================================
-     PAGE: PERFORMANCE MONITORING
-===================================================== -->
-
-<section class="page" id="page-performance">
- <div class="section-heading">
-  <div>
-   <span class="eyebrow">PERFORMANCE AND QUALITY ASSURANCE</span>
-   <h2>Institutional Performance Monitoring</h2>
-   <p>Track institutional indicators, identify performance gaps and monitor improvement.</p>
+<!-- PRIORITIES -->
+<section id="priorities">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="priorityKicker">Programme Priorities</div>
+    <h2 data-i="priorityTitle">Six interconnected priorities for transformation.</h2>
+    <p data-i="priorityText">Each priority will be informed by school assessments and the actual needs of participating communities.</p>
   </div>
- </div>
 
- <div class="panel">
-  <h3>Register Performance Indicator</h3>
-
-  <form id="performanceForm">
-   <div class="form-grid">
-    <div>
-     <label>School / Institution</label>
-     <input name="school" required>
-    </div>
-
-    <div>
-     <label>Performance Domain</label>
-     <select name="domain" required>
-      <option value="">Select domain</option>
-      <option>Teaching and Learning</option>
-      <option>Academic Achievement</option>
-      <option>Enrolment</option>
-      <option>Attendance</option>
-      <option>Teacher Development</option>
-      <option>Infrastructure</option>
-      <option>Financial Management</option>
-      <option>Governance</option>
-      <option>Student Welfare</option>
-     </select>
-    </div>
-
-    <div>
-     <label>Performance Indicator</label>
-     <input name="indicator" required>
-    </div>
-
-    <div>
-     <label>Baseline Value</label>
-     <input name="baseline" required>
-    </div>
-
-    <div>
-     <label>Current Value</label>
-     <input name="current" required>
-    </div>
-
-    <div>
-     <label>Target Value</label>
-     <input name="target" required>
-    </div>
-
-    <div>
-     <label>Assessment Period</label>
-     <input name="period" placeholder="2026/2027">
-    </div>
-
-    <div>
-     <label>Performance Status</label>
-     <select name="status">
-      <option>Not Assessed</option>
-      <option>On Track</option>
-      <option>Needs Improvement</option>
-      <option>Target Achieved</option>
-      <option>Below Target</option>
-     </select>
-    </div>
-   </div>
-
-   <label>Evidence and Comments</label>
-   <textarea name="evidence"></textarea>
-
-   <button class="btn" type="submit">Save Performance Indicator</button>
-  </form>
- </div>
-
- <div class="panel">
-  <h3>Performance Indicator Register</h3>
-
-  <div class="table-wrap">
-   <table>
-    <thead>
-     <tr>
-      <th>Institution</th>
-      <th>Domain</th>
-      <th>Indicator</th>
-      <th>Baseline</th>
-      <th>Current</th>
-      <th>Target</th>
-      <th>Status</th>
-      <th>Action</th>
-     </tr>
-    </thead>
-    <tbody id="performanceTable"></tbody>
-   </table>
+  <div class="priority-grid">
+    <article class="priority">
+      <b>01</b>
+      <h3 data-i="p1Title">Inclusive Education</h3>
+      <p data-i="p1Text">Support participation and learning for children with different abilities and learning needs.</p>
+    </article>
+    <article class="priority">
+      <b>02</b>
+      <h3 data-i="p2Title">Accessible Infrastructure and WASH</h3>
+      <p data-i="p2Text">Assess ramps, pathways, classrooms, accessible sanitation, clean water and safe school environments.</p>
+    </article>
+    <article class="priority">
+      <b>03</b>
+      <h3 data-i="p3Title">Teacher Development</h3>
+      <p data-i="p3Text">Strengthen inclusive pedagogy, classroom management, identification of learning needs and practical teaching skills.</p>
+    </article>
+    <article class="priority">
+      <b>04</b>
+      <h3 data-i="p4Title">Assistive Technology</h3>
+      <p data-i="p4Text">Explore appropriate assistive devices, accessible learning materials and responsible digital learning tools.</p>
+    </article>
+    <article class="priority">
+      <b>05</b>
+      <h3 data-i="p5Title">Foundational Learning</h3>
+      <p data-i="p5Text">Promote early literacy, numeracy, learning assessment and support for children at risk of falling behind.</p>
+    </article>
+    <article class="priority">
+      <b>06</b>
+      <h3 data-i="p6Title">Child Protection and Participation</h3>
+      <p data-i="p6Text">Promote safeguarding, safe reporting, child participation and stronger school-community relationships.</p>
+    </article>
   </div>
- </div>
+</div>
 </section>
 
-<!-- =====================================================
-     PAGE: STRATEGIC IMPROVEMENT PLAN
-===================================================== -->
-
-<section class="page" id="page-improvement">
- <div class="section-heading">
-  <div>
-   <span class="eyebrow">STRATEGIC INSTITUTIONAL DEVELOPMENT</span>
-   <h2>School Improvement Plan</h2>
-   <p>Translate institutional assessment findings into measurable improvement actions.</p>
+<!-- PEMBA -->
+<section class="soft" id="pemba">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="pembaKicker">Phase One • Pemba, Zanzibar</div>
+    <h2 data-i="pembaTitle">Pemba Inclusive Schools Transformation Programme.</h2>
+    <p data-i="pembaText">
+      A proposed 12-month demonstration involving five primary schools.
+      The initial phase will assess educational access, infrastructure,
+      disability inclusion, teacher development and child protection.
+    </p>
   </div>
- </div>
 
- <div class="panel">
-  <h3>Register Improvement Action</h3>
-
-  <form id="improvementForm">
-   <div class="form-grid">
-    <div>
-     <label>School / Institution</label>
-     <input name="school" required>
+  <div class="district-grid">
+    <div class="district">
+      <strong data-i="district1">Micheweni</strong>
+      <small data-i="districtLabel">Pemba North</small>
     </div>
-
-    <div>
-     <label>Priority Area</label>
-     <select name="priority" required>
-      <option value="">Select priority</option>
-      <option>Academic Performance</option>
-      <option>Teacher Capacity</option>
-      <option>Learning Resources</option>
-      <option>Infrastructure</option>
-      <option>Student Welfare</option>
-      <option>Institutional Governance</option>
-      <option>Financial Sustainability</option>
-      <option>Digital Transformation</option>
-     </select>
+    <div class="district">
+      <strong data-i="district2">Wete</strong>
+      <small data-i="districtLabel">Pemba North</small>
     </div>
-
-    <div>
-     <label>Improvement Objective</label>
-     <input name="objective" required>
+    <div class="district">
+      <strong data-i="district3">Chake Chake</strong>
+      <small data-i="districtLabel">Pemba South</small>
     </div>
-
-    <div>
-     <label>Responsible Person</label>
-     <input name="responsible" required>
+    <div class="district">
+      <strong data-i="district4">Mkoani</strong>
+      <small data-i="districtLabel">Pemba South</small>
     </div>
-
-    <div>
-     <label>Start Date</label>
-     <input name="startDate" type="date">
-    </div>
-
-    <div>
-     <label>Target Completion Date</label>
-     <input name="endDate" type="date">
-    </div>
-
-    <div>
-     <label>Required Budget (TZS)</label>
-     <input name="budget" type="number" min="0">
-    </div>
-
-    <div>
-     <label>Implementation Status</label>
-     <select name="status">
-      <option>Not Started</option>
-      <option>In Progress</option>
-      <option>Completed</option>
-      <option>Delayed</option>
-      <option>Requires Intervention</option>
-     </select>
-    </div>
-   </div>
-
-   <label>Activities and Implementation Strategy</label>
-   <textarea name="activities"></textarea>
-
-   <label>Expected Results</label>
-   <textarea name="results"></textarea>
-
-   <button class="btn" type="submit">Save Improvement Action</button>
-  </form>
- </div>
-
- <div class="panel">
-  <h3>Improvement Action Register</h3>
-
-  <div class="table-wrap">
-   <table>
-    <thead>
-     <tr>
-      <th>Institution</th>
-      <th>Priority</th>
-      <th>Objective</th>
-      <th>Responsible</th>
-      <th>Completion Date</th>
-      <th>Budget</th>
-      <th>Status</th>
-      <th>Action</th>
-     </tr>
-    </thead>
-    <tbody id="improvementTable"></tbody>
-   </table>
   </div>
- </div>
+
+  <div class="school-panel">
+    <h3 data-i="schoolTitle">Five-school demonstration framework</h3>
+    <p data-i="schoolText">Five participating schools will be selected following verification, consultation and baseline assessment.</p>
+    <div class="school-list">
+      <div class="school"><strong>01</strong><small data-i="schoolPlaceholder">School identity to be verified</small></div>
+      <div class="school"><strong>02</strong><small data-i="schoolPlaceholder">School identity to be verified</small></div>
+      <div class="school"><strong>03</strong><small data-i="schoolPlaceholder">School identity to be verified</small></div>
+      <div class="school"><strong>04</strong><small data-i="schoolPlaceholder">School identity to be verified</small></div>
+      <div class="school"><strong>05</strong><small data-i="schoolPlaceholder">School identity to be verified</small></div>
+    </div>
+    <div class="note" data-i="schoolNote">
+      No school is represented as an approved participant. Names, locations and participation will be published only after verification and appropriate agreement.
+    </div>
+  </div>
+</div>
 </section>
-<!-- =========================================================
- ZANZIHORIZON NEXUS
- PART 6 OF 6
- BILINGUAL APPLICATION ENGINE
- ENGLISH / KISWAHILI
-========================================================= -->
 
-<style>
-/* BILINGUAL LANGUAGE CONTROL */
+<!-- ROADMAP -->
+<section id="roadmap">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="roadKicker">Implementation Framework</div>
+    <h2 data-i="roadTitle">A structured 12-month journey.</h2>
+    <p data-i="roadText">The following is a proposed sequence, subject to funding, approvals, access and school-level assessments.</p>
+  </div>
 
-.language-switcher {
- position:fixed;
- top:14px;
- right:16px;
- z-index:99999;
- display:flex;
- align-items:center;
- gap:5px;
- padding:5px;
- background:#052653;
- border:1px solid #D4AF37;
- border-radius:30px;
- box-shadow:0 4px 16px rgba(0,0,0,.2);
-}
+  <div class="roadmap">
+    <div class="phase">
+      <strong data-i="phase1Title">Months 1–2: Preparation and Baseline Assessment</strong>
+      <p data-i="phase1Text">Verify schools, consult communities, assess accessibility, establish baseline indicators and confirm implementation arrangements.</p>
+    </div>
+    <div class="phase">
+      <strong data-i="phase2Title">Months 3–4: Planning and Capacity Development</strong>
+      <p data-i="phase2Text">Develop school improvement plans, prioritise interventions and prepare teachers and implementation teams.</p>
+    </div>
+    <div class="phase">
+      <strong data-i="phase3Title">Months 5–8: Implementation</strong>
+      <p data-i="phase3Text">Deliver approved school improvements, inclusive learning support, teacher development and appropriate assistive resources.</p>
+    </div>
+    <div class="phase">
+      <strong data-i="phase4Title">Months 9–10: Monitoring and Adjustment</strong>
+      <p data-i="phase4Text">Review progress, document challenges, gather feedback and make evidence-based adjustments.</p>
+    </div>
+    <div class="phase">
+      <strong data-i="phase5Title">Months 11–12: Evaluation and Reporting</strong>
+      <p data-i="phase5Text">Evaluate results, publish an appropriate report, document lessons and prepare recommendations for future expansion.</p>
+    </div>
+  </div>
+</div>
+</section>
 
-.language-switcher button {
- border:0;
- border-radius:22px;
- padding:9px 13px;
- cursor:pointer;
- font-weight:700;
- font-size:12px;
- background:transparent;
- color:#fff;
-}
+<!-- BUDGET -->
+<section class="soft" id="budget">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="budgetKicker">Indicative Resource Framework</div>
+    <h2 data-i="budgetTitle">A transparent TSh 50 million pilot budget.</h2>
+    <p data-i="budgetText">A preliminary planning allocation for discussion and funding development. It is not a secured grant or expenditure report.</p>
+  </div>
 
-.language-switcher button.active {
- background:#D4AF37;
- color:#052653;
-}
+  <div class="budget-wrap">
+    <div class="budget-total">
+      <span data-i="budgetTotalLabel">Proposed total pilot requirement</span>
+      <strong>TSh 50,000,000</strong>
+      <span class="pill gold" data-i="budgetStatus">Indicative • Not yet secured</span>
+      <p data-i="budgetTotalText">Final allocations will depend on verified school needs, technical assessments, quotations and funder requirements.</p>
+    </div>
 
-@media(max-width:600px) {
- .language-switcher {
-  top:8px;
-  right:8px;
- }
- .language-switcher button {
-  padding:7px 10px;
- }
-}
-</style>
+    <div>
+      <div class="budget-row">
+        <div><strong data-i="b1">School accessibility and minor infrastructure</strong><div class="bar"><span style="width:25%"></span></div></div>
+        <strong>TSh 12,500,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b2">WASH and safe learning environments</strong><div class="bar"><span style="width:15%"></span></div></div>
+        <strong>TSh 7,500,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b3">Teacher development and training</strong><div class="bar"><span style="width:15%"></span></div></div>
+        <strong>TSh 7,500,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b4">Assistive technology and learning materials</strong><div class="bar"><span style="width:15%"></span></div></div>
+        <strong>TSh 7,500,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b5">Assessment, monitoring and evaluation</strong><div class="bar"><span style="width:12%"></span></div></div>
+        <strong>TSh 6,000,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b6">Safeguarding and community engagement</strong><div class="bar"><span style="width:8%"></span></div></div>
+        <strong>TSh 4,000,000</strong>
+      </div>
+      <div class="budget-row">
+        <div><strong data-i="b7">Programme coordination and administration</strong><div class="bar"><span style="width:10%"></span></div></div>
+        <strong>TSh 5,000,000</strong>
+      </div>
+      <div class="budget-row">
+        <strong data-i="budgetGrandTotal">TOTAL</strong>
+        <strong>TSh 50,000,000</strong>
+      </div>
+    </div>
+  </div>
+  <div class="note" data-i="budgetNote">
+    These are proposed planning allocations, not verified market quotations. Final budgets will be justified by actual school assessments and procurement documentation.
+  </div>
+</div>
+</section>
+
+<!-- NATIONAL PLATFORM -->
+<section id="national">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="nationalKicker">National Expansion Architecture</div>
+    <h2 data-i="nationalTitle">One national vision. Thirty-one regional pathways.</h2>
+    <p data-i="nationalText">
+      The platform is designed from the beginning to accommodate all 31
+      regions, while allowing each region to have its own independent
+      assessment, programme records, budget and implementation status.
+    </p>
+  </div>
+
+  <div class="region-tools">
+    <input class="search" id="regionSearch" type="search" data-placeholder="regionPlaceholder" placeholder="Search for a region...">
+    <span class="pill blue" data-i="regionCount">31 administrative regions</span>
+  </div>
+
+  <div class="region-grid" id="regionGrid"></div>
+
+  <div class="map-panel">
+    <h3 data-i="mapTitle">Geographical information and mapping</h3>
+    <div class="map-placeholder">
+      <div>
+        <strong data-i="mapLabel">Tanzania: 31-region programme framework</strong>
+        <p data-i="mapText">
+          An official administrative-boundary map will be used when
+          verified source data and appropriate mapping permissions
+          are available. Orientation markers must not be mistaken
+          for official boundaries or verified school locations.
+        </p>
+      </div>
+    </div>
+    <p class="muted" style="font-size:11px" data-i="mapSource">
+      Administrative reference: National Bureau of Statistics and relevant official government sources.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- STATUS -->
+<section class="soft" id="dashboard">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="dashboardKicker">Programme Monitoring</div>
+    <h2 data-i="dashboardTitle">A transparent programme lifecycle.</h2>
+    <p data-i="dashboardText">Every regional programme must move through defined stages supported by evidence and documented decisions.</p>
+  </div>
+
+  <div class="status-grid">
+    <div class="status">
+      <strong><span class="dot proposed"></span><span data-i="status1">Proposed</span></strong>
+      <span data-i="status1Text">An idea or programme concept awaiting assessment.</span>
+    </div>
+    <div class="status">
+      <strong><span class="dot assessed"></span><span data-i="status2">Assessed</span></strong>
+      <span data-i="status2Text">Evidence and needs assessment completed.</span>
+    </div>
+    <div class="status">
+      <strong><span class="dot active"></span><span data-i="status3">Active</span></strong>
+      <span data-i="status3Text">Implementation formally authorised and underway.</span>
+    </div>
+    <div class="status">
+      <strong><span class="dot completed"></span><span data-i="status4">Completed</span></strong>
+      <span data-i="status4Text">Implementation completed and results documented.</span>
+    </div>
+  </div>
+  <div class="note" data-i="dashboardNote">
+    This is a programme framework, not a live reporting database. No region or school is labelled active or completed without verified records.
+  </div>
+</div>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="govKicker">Trust and Accountability</div>
+    <h2 data-i="govTitle">Development must be built on integrity.</h2>
+    <p data-i="govText">Transparent processes, safeguarding and responsible resource management are essential to credible implementation.</p>
+  </div>
+
+  <div class="governance-grid">
+    <article class="card">
+      <div class="card-icon">⚖</div>
+      <h3 data-i="gov1">Institutional Independence</h3>
+      <p data-i="gov1Text">Zanzibar Horizon is presented as an independent initiative. It does not claim government endorsement, political affiliation or institutional approval.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">▣</div>
+      <h3 data-i="gov2">Financial Accountability</h3>
+      <p data-i="gov2Text">Funding received, expenditure, procurement, supporting documents and programme budgets should be properly recorded and reported.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">♡</div>
+      <h3 data-i="gov3">Child Safeguarding</h3>
+      <p data-i="gov3Text">Child safety, privacy, informed consent, safe participation and appropriate reporting procedures must guide all school activities.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">♿</div>
+      <h3 data-i="gov4">Disability Inclusion</h3>
+      <p data-i="gov4Text">Persons with disabilities, their representative organisations and affected families should participate meaningfully in programme design and review.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">⌕</div>
+      <h3 data-i="gov5">Evidence and Verification</h3>
+      <p data-i="gov5Text">Claims about schools, beneficiaries, partnerships, achievements and expenditure must be supported by reliable records.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">◈</div>
+      <h3 data-i="gov6">Procurement Integrity</h3>
+      <p data-i="gov6Text">Purchasing decisions should follow documented procedures, fair supplier selection and applicable funder requirements.</p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <h3 data-i="safeguardTitle">A commitment to responsible development</h3>
+    <p data-i="safeguardText">
+      No child should be exposed to exploitation, discrimination,
+      inappropriate photography, unsafe participation or misuse
+      of personal information in the name of development.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- FUNDING -->
+<section class="soft" id="funding">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="fundKicker">Resource Mobilisation</div>
+    <h2 data-i="fundTitle">Building responsible funding partnerships.</h2>
+    <p data-i="fundText">
+      Zanzibar Horizon seeks to develop credible, evidence-based
+      funding proposals and explore appropriate partnerships
+      for inclusive education and community development.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-icon">✦</div>
+      <h3 data-i="fund1">International Foundations</h3>
+      <p data-i="fund1Text">Explore foundations supporting education access, disability inclusion, child development and community transformation.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">◎</div>
+      <h3 data-i="fund2">Embassy and Bilateral Funding</h3>
+      <p data-i="fund2Text">Monitor eligible embassy small grants and bilateral development programmes.</p>
+    </article>
+    <article class="card">
+      <div class="card-icon">⌂</div>
+      <h3 data-i="fund3">Corporate and Local Partnerships</h3>
+      <p data-i="fund3Text">Explore responsible corporate social investment and technical collaboration.</p>
+    </article>
+  </div>
+
+  <div class="note" data-i="fundNote">
+    No funding award, donor partnership, grant approval or financial commitment is currently represented as secured through this website. Each opportunity must be verified against the funder's official requirements.
+  </div>
+</div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker" data-i="researchKicker">Knowledge and Learning</div>
+    <h2 data-i="researchTitle">Research that informs action.</h2>
+    <p data-i="researchText">
+      The programme will seek to develop a practical evidence base
+      around education access, school readiness, disability inclusion,
+      foundational learning and community needs.
+    </p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <h3 data-i="research1">School Assessments</h3>
+      <p data-i="research1Text">Document infrastructure, learning conditions, accessibility and school-level priorities.</p>
+    </article>
+    <article class="card">
+      <h3 data-i="research2">Learning Outcomes</h3>
+      <p data-i="research2Text">Develop appropriate indicators for literacy, numeracy, attendance and participation.</p>
+    </article>
+    <article class="card">
+      <h3 data-i="research3">Community Evidence</h3>
+      <p data-i="research3Text">Include the experiences of educators, families, learners and disability organisations.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="soft" id="contact">
+<div class="container">
+  <div class="section-head center">
+    <div class="kicker" data-i="contactKicker">Engagement</div>
+    <h2 data-i="contactTitle">Join the conversation on inclusive education.</h2>
+    <p data-i="contactText">
+      We welcome constructive engagement from educators,
+      researchers, community organisations, disability advocates
+      and potential development partners.
+    </p>
+  </div>
+  <div class="card" style="max-width:700px;margin:auto;text-align:center">
+    <div class="card-icon" style="margin:0 auto 18px">✉</div>
+    <h3 data-i="contactSub">Institutional contact details</h3>
+    <p data-i="contactInfo">
+      Official contact information will be published after verification.
+      This website does not currently represent an unverified postal
+      address, telephone number or email as an established office.
+    </p>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+  <div class="footer-grid">
+    <div>
+      <h3>ZANZIBAR HORIZON</h3>
+      <p data-i="footerAbout">
+        An independent initiative advancing inclusive education,
+        research, innovation and community development.
+      </p>
+      <p><strong data-i="footerTagline">Education. Inclusion. Opportunity.</strong></p>
+    </div>
+    <div>
+      <h3 data-i="footerExplore">Explore</h3>
+      <div class="footer-links">
+        <a href="#about" data-i="navAbout">About</a>
+        <a href="#priorities" data-i="navPriorities">Our Priorities</a>
+        <a href="#pemba" data-i="navPemba">Pemba Pilot</a>
+        <a href="#national" data-i="navNational">National Vision</a>
+      </div>
+    </div>
+    <div>
+      <h3 data-i="footerPrinciples">Our Principles</h3>
+      <div class="footer-links">
+        <a href="#governance" data-i="gov1">Institutional Independence</a>
+        <a href="#governance" data-i="gov2">Financial Accountability</a>
+        <a href="#governance" data-i="gov3">Child Safeguarding</a>
+        <a href="#research" data-i="researchTitle">Research and Learning</a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    © <span id="year"></span> ZANZIBAR HORIZON.
+    <span data-i="copyright">Independent initiative. All rights reserved. Programme information is subject to verification and development.</span>
+  </div>
+</div>
+</footer>
+
+<button class="backtop" id="backtop" aria-label="Back to top">↑</button>
 
 <script>
-(function(){
-"use strict";
-
-/* =========================================================
- 1. APPLICATION CONFIGURATION
-========================================================= */
-
-const APP_CONFIG = {
- storageKey:"zanzibar_horizon_v1",
- languageKey:"zanzihorizon_language",
- defaultLanguage:"en"
-};
-
-const TABLES = {
- baseline:"baselineTable",
- budget:"budgetTable",
- expenditure:"expenditureTable",
- document:"documentTable",
- report:"reportTable",
- performance:"performanceTable",
- improvement:"improvementTable"
-};
-
-let database = {};
-let currentLanguage =
- localStorage.getItem(APP_CONFIG.languageKey) || "en";
-
-/* =========================================================
- 2. ENGLISH - KISWAHILI TRANSLATION DICTIONARY
-========================================================= */
+/* ==========================================
+   ZANZIBAR HORIZON
+   Bilingual website content
+========================================== */
 
 const translations = {
+en: {
+navAbout:"About",navPriorities:"Our Priorities",navPemba:"Pemba Pilot",
+navNational:"National Vision",navBudget:"Budget",navGovernance:"Governance",
+heroEyebrow:"An independent education and development initiative",
+heroTitle:"A New Horizon for Inclusive Education.",
+heroText:"Advancing equal educational opportunity, inclusive schools, accessible learning environments and community development across Tanzania, beginning in Pemba.",
+heroButton1:"Explore the Pemba Pilot",heroButton2:"Discover Our Vision",
+heroNote:"Independent initiative • Evidence-led planning • Community-centred development",
+aboutKicker:"Who We Are",aboutTitle:"Education is the foundation of an inclusive society.",
+aboutText1:"Zanzibar Horizon is an independent initiative designed to advance education access, inclusive learning, research, innovation and sustainable community development.",
+aboutText2:"Our approach begins with understanding the realities of schools and communities, identifying barriers, developing practical interventions and measuring results.",
+aboutText3:"Pemba provides the initial demonstration setting. The long-term architecture is designed to support independently assessed programmes across all 31 regions of Tanzania.",
+principleLabel:"Our Guiding Principle",
+principleQuote:"Every child deserves the opportunity to learn, participate, develop and fulfil their potential.",
+principleNote:"Inclusion must be demonstrated through practical action.",
+statRegions:"National regions in the programme architecture",
+statSchools:"Proposed Pemba demonstration schools",
+statMonths:"Proposed pilot months",statBudget:"Indicative TSh pilot budget",
+visionKicker:"Our Vision",visionTitle:"A national framework built on local realities.",
+visionText:"We seek to connect school-level evidence, inclusive education, community participation and accountable programme delivery.",
+visionCard1:"Equal Opportunity",visionCard1Text:"Reduce barriers that prevent children from accessing, attending and participating in quality education.",
+visionCard2:"Inclusive Schools",visionCard2Text:"Promote accessible facilities, inclusive teaching practices and appropriate learning support.",
+visionCard3:"Evidence and Research",visionCard3Text:"Use reliable assessments, transparent indicators and documented findings to guide decisions.",
+visionCard4:"Innovation",visionCard4Text:"Explore practical technology, assistive tools and learning solutions appropriate to local needs.",
+visionCard5:"Community Participation",visionCard5Text:"Recognise families, educators, children and persons with disabilities as important participants.",
+visionCard6:"Accountability",visionCard6Text:"Track resources, implementation, outcomes and challenges through clear reporting.",
+priorityKicker:"Programme Priorities",priorityTitle:"Six interconnected priorities for transformation.",
+priorityText:"Each priority will be informed by school assessments and the actual needs of participating communities.",
+p1Title:"Inclusive Education",p1Text:"Support participation and learning for children with different abilities and learning needs.",
+p2Title:"Accessible Infrastructure and WASH",p2Text:"Assess ramps, pathways, classrooms, accessible sanitation, clean water and safe school environments.",
+p3Title:"Teacher Development",p3Text:"Strengthen inclusive pedagogy, classroom management, identification of learning needs and practical teaching skills.",
+p4Title:"Assistive Technology",p4Text:"Explore appropriate assistive devices, accessible learning materials and responsible digital learning tools.",
+p5Title:"Foundational Learning",p5Text:"Promote early literacy, numeracy, learning assessment and support for children at risk of falling behind.",
+p6Title:"Child Protection and Participation",p6Text:"Promote safeguarding, safe reporting, child participation and stronger school-community relationships.",
+pembaKicker:"Phase One • Pemba, Zanzibar",pembaTitle:"Pemba Inclusive Schools Transformation Programme.",
+pembaText:"A proposed 12-month demonstration involving five primary schools. The initial phase will assess educational access, infrastructure, disability inclusion, teacher development and child protection.",
+district1:"Micheweni",district2:"Wete",district3:"Chake Chake",district4:"Mkoani",
+districtLabel:"Pemba administrative district",
+schoolTitle:"Five-school demonstration framework",
+schoolText:"Five participating schools will be selected following verification, consultation and baseline assessment.",
+schoolPlaceholder:"School identity to be verified",
+schoolNote:"No school is represented as an approved participant. Names, locations and participation will be published only after verification and appropriate agreement.",
+roadKicker:"Implementation Framework",roadTitle:"A structured 12-month journey.",
+roadText:"The following is a proposed sequence, subject to funding, approvals, access and school-level assessments.",
+phase1Title:"Months 1–2: Preparation and Baseline Assessment",
+phase1Text:"Verify schools, consult communities, assess accessibility, establish baseline indicators and confirm implementation arrangements.",
+phase2Title:"Months 3–4: Planning and Capacity Development",
+phase2Text:"Develop school improvement plans, prioritise interventions and prepare teachers and implementation teams.",
+phase3Title:"Months 5–8: Implementation",
+phase3Text:"Deliver approved school improvements, inclusive learning support, teacher development and appropriate assistive resources.",
+phase4Title:"Months 9–10: Monitoring and Adjustment",
+phase4Text:"Review progress, document challenges, gather feedback and make evidence-based adjustments.",
+phase5Title:"Months 11–12: Evaluation and Reporting",
+phase5Text:"Evaluate results, publish an appropriate report, document lessons and prepare recommendations for future expansion.",
+budgetKicker:"Indicative Resource Framework",budgetTitle:"A transparent TSh 50 million pilot budget.",
+budgetText:"A preliminary planning allocation for discussion and funding development. It is not a secured grant or expenditure report.",
+budgetTotalLabel:"Proposed total pilot requirement",budgetStatus:"Indicative • Not yet secured",
+budgetTotalText:"Final allocations will depend on verified school needs, technical assessments, quotations and funder requirements.",
+b1:"School accessibility and minor infrastructure",
+b2:"WASH and safe learning environments",
+b3:"Teacher development and training",
+b4:"Assistive technology and learning materials",
+b5:"Assessment, monitoring and evaluation",
+b6:"Safeguarding and community engagement",
+b7:"Programme coordination and administration",
+budgetGrandTotal:"TOTAL",
+budgetNote:"These are proposed planning allocations, not verified market quotations. Final budgets will be justified by actual school assessments and procurement documentation.",
+nationalKicker:"National Expansion Architecture",
+nationalTitle:"One national vision. Thirty-one regional pathways.",
+nationalText:"The platform is designed from the beginning to accommodate all 31 regions, while allowing each region to have its own independent assessment, programme records, budget and implementation status.",
+regionPlaceholder:"Search for a region...",regionCount:"31 administrative regions",
+mapTitle:"Geographical information and mapping",
+mapLabel:"Tanzania: 31-region programme framework",
+mapText:"An official administrative-boundary map will be used when verified source data and appropriate mapping permissions are available. Orientation markers must not be mistaken for official boundaries or verified school locations.",
+mapSource:"Administrative reference: National Bureau of Statistics and relevant official government sources.",
+dashboardKicker:"Programme Monitoring",dashboardTitle:"A transparent programme lifecycle.",
+dashboardText:"Every regional programme must move through defined stages supported by evidence and documented decisions.",
+status1:"Proposed",status1Text:"An idea or programme concept awaiting assessment.",
+status2:"Assessed",status2Text:"Evidence and needs assessment completed.",
+status3:"Active",status3Text:"Implementation formally authorised and underway.",
+status4:"Completed",status4Text:"Implementation completed and results documented.",
+dashboardNote:"This is a programme framework, not a live reporting database. No region or school is labelled active or completed without verified records.",
+govKicker:"Trust and Accountability",govTitle:"Development must be built on integrity.",
+govText:"Transparent processes, safeguarding and responsible resource management are essential to credible implementation.",
+gov1:"Institutional Independence",gov1Text:"Zanzibar Horizon is presented as an independent initiative. It does not claim government endorsement, political affiliation or institutional approval.",
+gov2:"Financial Accountability",gov2Text:"Funding received, expenditure, procurement, supporting documents and programme budgets should be properly recorded and reported.",
+gov3:"Child Safeguarding",gov3Text:"Child safety, privacy, informed consent, safe participation and appropriate reporting procedures must guide all school activities.",
+gov4:"Disability Inclusion",gov4Text:"Persons with disabilities, their representative organisations and affected families should participate meaningfully in programme design and review.",
+gov5:"Evidence and Verification",gov5Text:"Claims about schools, beneficiaries, partnerships, achievements and expenditure must be supported by reliable records.",
+gov6:"Procurement Integrity",gov6Text:"Purchasing decisions should follow documented procedures, fair supplier selection and applicable funder requirements.",
+safeguardTitle:"A commitment to responsible development",
+safeguardText:"No child should be exposed to exploitation, discrimination, inappropriate photography, unsafe participation or misuse of personal information in the name of development.",
+fundKicker:"Resource Mobilisation",fundTitle:"Building responsible funding partnerships.",
+fundText:"Zanzibar Horizon seeks to develop credible, evidence-based funding proposals and explore appropriate partnerships for inclusive education and community development.",
+fund1:"International Foundations",fund1Text:"Explore foundations supporting education access, disability inclusion, child development and community transformation.",
+fund2:"Embassy and Bilateral Funding",fund2Text:"Monitor eligible embassy small grants and bilateral development programmes.",
+fund3:"Corporate and Local Partnerships",fund3Text:"Explore responsible corporate social investment and technical collaboration.",
+fundNote:"No funding award, donor partnership, grant approval or financial commitment is currently represented as secured through this website. Each opportunity must be verified against the funder's official requirements.",
+researchKicker:"Knowledge and Learning",researchTitle:"Research that informs action.",
+researchText:"The programme will seek to develop a practical evidence base around education access, school readiness, disability inclusion, foundational learning and community needs.",
+research1:"School Assessments",research1Text:"Document infrastructure, learning conditions, accessibility and school-level priorities.",
+research2:"Learning Outcomes",research2Text:"Develop appropriate indicators for literacy, numeracy, attendance and participation.",
+research3:"Community Evidence",research3Text:"Include the experiences of educators, families, learners and disability organisations.",
+contactKicker:"Engagement",contactTitle:"Join the conversation on inclusive education.",
+contactText:"We welcome constructive engagement from educators, researchers, community organisations, disability advocates and potential development partners.",
+contactSub:"Institutional contact details",
+contactInfo:"Official contact information will be published after verification. This website does not currently represent an unverified postal address, telephone number or email as an established office.",
+footerAbout:"An independent initiative advancing inclusive education, research, innovation and community development.",
+footerTagline:"Education. Inclusion. Opportunity.",footerExplore:"Explore",
+footerPrinciples:"Our Principles",
+copyright:"Independent initiative. All rights reserved. Programme information is subject to verification and development."
+},
 
- "Dashboard":"Dashibodi",
- "Home":"Mwanzo",
- "Homepage":"Ukurasa wa Mwanzo",
- "Command Centre":"Kituo Kikuu cha Udhibiti",
- "Overview":"Muhtasari",
- "Institutional Management":"Usimamizi wa Taasisi",
- "Education Management":"Usimamizi wa Elimu",
- "School Management":"Usimamizi wa Shule",
- "Institutional Intelligence":"Taarifa za Kiakili za Taasisi",
- "Institutional Performance":"Utendaji wa Taasisi",
- "Institutional Reports":"Ripoti za Taasisi",
- "Performance Monitoring":"Ufuatiliaji wa Utendaji",
- "Financial Management":"Usimamizi wa Fedha",
- "Financial Oversight":"Usimamizi wa Fedha",
- "School Budget":"Bajeti ya Shule",
- "Budget Planning":"Mipango ya Bajeti",
- "Expenditure Monitoring":"Ufuatiliaji wa Matumizi",
- "Document Management":"Usimamizi wa Nyaraka",
- "Document Register":"Daftari la Nyaraka",
- "School Improvement Plan":"Mpango wa Kuboresha Shule",
- "Strategic Improvement Plan":"Mpango Mkakati wa Maboresho",
- "Institutional Records":"Kumbukumbu za Taasisi",
- "Quality Assurance":"Uhakiki wa Ubora",
- "Academic Performance":"Utendaji wa Kitaaluma",
- "Academic Management":"Usimamizi wa Kitaaluma",
- "Student Management":"Usimamizi wa Wanafunzi",
- "Teacher Management":"Usimamizi wa Walimu",
- "Enrolment":"Uandikishaji",
- "Attendance":"Mahudhurio",
- "Infrastructure":"Miundombinu",
- "Teaching and Learning":"Ufundishaji na Ujifunzaji",
- "Teaching and Learning Materials":"Vifaa vya Kufundishia na Kujifunzia",
- "Governance":"Utawala",
- "Administration":"Utawala wa Kiutendaji",
- "Student Welfare":"Ustawi wa Wanafunzi",
-
- "Total Budget":"Jumla ya Bajeti",
- "Total Expenditure":"Jumla ya Matumizi",
- "Available Balance":"Salio Lililopo",
- "Register School Budget":"Sajili Bajeti ya Shule",
- "Register Document":"Sajili Nyaraka",
- "Register Performance Indicator":"Sajili Kiashiria cha Utendaji",
- "Record Expenditure":"Rekodi Matumizi",
- "Report Configuration":"Mipangilio ya Ripoti",
- "Budget Register":"Daftari la Bajeti",
- "Expenditure Register":"Daftari la Matumizi",
- "Performance Indicator Register":"Daftari la Viashiria vya Utendaji",
- "Improvement Action Register":"Daftari la Hatua za Maboresho",
- "Institutional Report Register":"Daftari la Ripoti za Taasisi",
-
- "School / Institution":"Shule / Taasisi",
- "Institution":"Taasisi",
- "School":"Shule",
- "Financial Year":"Mwaka wa Fedha",
- "Budget Category":"Kategoria ya Bajeti",
- "Allocated Amount (TZS)":"Kiasi Kilichotengwa (TZS)",
- "Expenditure (TZS)":"Matumizi (TZS)",
- "Amount (TZS)":"Kiasi (TZS)",
- "Approval Status":"Hali ya Kuidhinishwa",
- "Financial Notes":"Maelezo ya Fedha",
- "Expense Category":"Kategoria ya Matumizi",
- "Expenditure Date":"Tarehe ya Matumizi",
- "Payment Reference":"Namba ya Malipo",
- "Verification Status":"Hali ya Uhakiki",
- "Description / Justification":"Maelezo / Sababu",
- "Document Title":"Kichwa cha Nyaraka",
- "Document Category":"Kategoria ya Nyaraka",
- "Reference Number":"Namba ya Kumbukumbu",
- "Document Date":"Tarehe ya Nyaraka",
- "Document Description":"Maelezo ya Nyaraka",
- "Report Type":"Aina ya Ripoti",
- "Reporting Period":"Kipindi cha Kuripoti",
- "Prepared By":"Imeandaliwa na",
- "Report Status":"Hali ya Ripoti",
- "Executive Summary":"Muhtasari wa Kiutendaji",
- "Key Findings":"Matokeo Muhimu",
- "Recommendations":"Mapendekezo",
- "Performance Domain":"Eneo la Utendaji",
- "Performance Indicator":"Kiashiria cha Utendaji",
- "Baseline Value":"Thamani ya Msingi",
- "Current Value":"Thamani ya Sasa",
- "Target Value":"Thamani Lengwa",
- "Assessment Period":"Kipindi cha Tathmini",
- "Performance Status":"Hali ya Utendaji",
- "Evidence and Comments":"Ushahidi na Maoni",
- "Priority Area":"Eneo la Kipaumbele",
- "Improvement Objective":"Lengo la Uboreshaji",
- "Responsible Person":"Mhusika Mwenye Wajibu",
- "Start Date":"Tarehe ya Kuanza",
- "Target Completion Date":"Tarehe Lengwa ya Kukamilisha",
- "Completion Date":"Tarehe ya Kukamilisha",
- "Required Budget (TZS)":"Bajeti Inayohitajika (TZS)",
- "Implementation Status":"Hali ya Utekelezaji",
- "Activities and Implementation Strategy":"Shughuli na Mkakati wa Utekelezaji",
- "Expected Results":"Matokeo Yanayotarajiwa",
-
- "Personnel":"Watumishi",
- "Teaching Materials":"Vifaa vya Kufundishia",
- "Infrastructure":"Miundombinu",
- "Administration":"Utawala",
- "Student Welfare":"Ustawi wa Wanafunzi",
- "ICT and Technology":"TEHAMA na Teknolojia",
- "ICT":"TEHAMA",
- "Transport":"Usafiri",
- "Other":"Nyingine",
- "Registration":"Usajili",
- "Financial Records":"Kumbukumbu za Fedha",
- "Academic Records":"Kumbukumbu za Kitaaluma",
- "Staff Records":"Kumbukumbu za Watumishi",
- "Policy Documents":"Nyaraka za Sera",
- "Teaching and Learning Materials":"Vifaa vya Kufundishia na Kujifunzia",
- "Infrastructure Assessment":"Tathmini ya Miundombinu",
- "Financial Performance":"Utendaji wa Kifedha",
- "Governance and Compliance":"Utawala na Uzingatiaji wa Sheria",
- "School Improvement":"Uboreshaji wa Shule",
- "Enrolment and Attendance":"Uandikishaji na Mahudhurio",
- "Comprehensive Institutional Report":"Ripoti Kamili ya Taasisi",
- "Teacher Development":"Maendeleo ya Walimu",
- "Financial Sustainability":"Uendelevu wa Kifedha",
- "Digital Transformation":"Mabadiliko ya Kidijitali",
- "Student Welfare":"Ustawi wa Wanafunzi",
-
- "Unverified":"Haijathibitishwa",
- "Field verified":"Imethibitishwa Uwanjani",
- "Official record verified":"Imethibitishwa kwa Kumbukumbu Rasmi",
- "Pending":"Inasubiri",
- "Approved":"Imeidhinishwa",
- "Rejected":"Imekataliwa",
- "Pending Verification":"Inasubiri Uhakiki",
- "Verified":"Imethibitishwa",
- "Requires Review":"Inahitaji Mapitio",
- "Expired":"Muda Wake Umekwisha",
- "Requires Renewal":"Inahitaji Kufanywa Upya",
- "Draft":"Rasimu",
- "Under Review":"Inafanyiwa Mapitio",
- "Not Assessed":"Haijatathminiwa",
- "On Track":"Inaendelea Vizuri",
- "Needs Improvement":"Inahitaji Maboresho",
- "Target Achieved":"Lengo Limefikiwa",
- "Below Target":"Chini ya Lengo",
- "Not Started":"Haijaanza",
- "In Progress":"Inaendelea",
- "Completed":"Imekamilika",
- "Delayed":"Imechelewa",
- "Requires Intervention":"Inahitaji Hatua za Kuingilia",
-
- "Save":"Hifadhi",
- "Save Baseline":"Hifadhi Thamani ya Msingi",
- "Save Budget Record":"Hifadhi Taarifa za Bajeti",
- "Save Expenditure":"Hifadhi Matumizi",
- "Save Document Record":"Hifadhi Taarifa za Nyaraka",
- "Save Report":"Hifadhi Ripoti",
- "Save Performance Indicator":"Hifadhi Kiashiria cha Utendaji",
- "Save Improvement Action":"Hifadhi Hatua ya Uboreshaji",
- "Delete":"Futa",
- "Edit":"Hariri",
- "Update":"Sasisha",
- "Cancel":"Ghairi",
- "Search":"Tafuta",
- "Filter":"Chuja",
- "Download":"Pakua",
- "Export":"Hamisha",
- "Print":"Chapisha",
- "View":"Angalia",
- "Action":"Hatua",
- "Actions":"Hatua",
- "Status":"Hali",
- "Date":"Tarehe",
- "Value":"Thamani",
- "Period":"Kipindi",
- "Category":"Kategoria",
- "Budget":"Bajeti",
- "Balance":"Salio",
- "Spent":"Kilichotumika",
- "Source and methodology":"Chanzo na mbinu zilizotumika",
- "Source and Methodology":"Chanzo na Mbinu Zilizotumika",
-
- "Select category":"Chagua kategoria",
- "Select domain":"Chagua eneo",
- "Select priority":"Chagua kipaumbele",
- "Select report":"Chagua ripoti",
- "Select":"Chagua",
- "Required":"Inahitajika",
- "Please select":"Tafadhali chagua",
- "No records found":"Hakuna kumbukumbu zilizopatikana",
- "Record saved successfully.":"Taarifa zimehifadhiwa kikamilifu.",
- "Delete this record permanently?":"Una uhakika unataka kufuta taarifa hii kabisa?",
- "There are no records to export.":"Hakuna taarifa za kuhamisha.",
- "Unable to save data. Storage may be full.":"Imeshindikana kuhifadhi taarifa. Nafasi ya hifadhi inaweza kuwa imejaa.",
- "English":"Kiingereza",
- "Kiswahili":"Kiswahili",
- "Language":"Lugha",
- "Welcome":"Karibu",
- "Learn More":"Jifunze Zaidi",
- "Contact Us":"Wasiliana Nasi",
- "About Us":"Kuhusu Sisi",
- "Our Services":"Huduma Zetu",
- "Get Started":"Anza",
- "Explore":"Chunguza",
- "Back":"Rudi",
- "Next":"Endelea",
- "Previous":"Iliyotangulia",
- "Logout":"Ondoka",
- "Login":"Ingia",
- "Settings":"Mipangilio",
- "Profile":"Wasifu",
- "Help":"Msaada",
- "Notifications":"Arifa",
- "Close":"Funga"
+sw: {
+navAbout:"Kuhusu Sisi",navPriorities:"Vipaumbele Vyetu",navPemba:"Mradi wa Pemba",
+navNational:"Dira ya Kitaifa",navBudget:"Bajeti",navGovernance:"Utawala",
+heroEyebrow:"Mpango huru wa elimu na maendeleo",
+heroTitle:"Dira Mpya ya Elimu Jumuishi.",
+heroText:"Kukuza fursa sawa za elimu, shule jumuishi, mazingira rafiki ya kujifunzia na maendeleo ya jamii nchini Tanzania, tukianzia Pemba.",
+heroButton1:"Fahamu Mradi wa Pemba",heroButton2:"Fahamu Dira Yetu",
+heroNote:"Mpango huru • Mipango inayotegemea ushahidi • Maendeleo yanayoshirikisha jamii",
+aboutKicker:"Sisi Ni Nani",aboutTitle:"Elimu ni msingi wa jamii jumuishi.",
+aboutText1:"Zanzibar Horizon ni mpango huru unaolenga kuendeleza upatikanaji wa elimu, ujifunzaji jumuishi, utafiti, ubunifu na maendeleo endelevu ya jamii.",
+aboutText2:"Mtazamo wetu unaanzia katika kuelewa hali halisi ya shule na jamii, kutambua vikwazo, kuandaa hatua za vitendo na kupima matokeo.",
+aboutText3:"Pemba ndiyo eneo la kuanzia kwa majaribio ya utekelezaji. Mfumo wa muda mrefu umeandaliwa kuwezesha programu zitakazotathminiwa kwa kujitegemea katika mikoa yote 31 ya Tanzania.",
+principleLabel:"Kanuni Yetu Kuu",
+principleQuote:"Kila mtoto anastahili fursa ya kujifunza, kushiriki, kukua na kufikia uwezo wake.",
+principleNote:"Ujumuishi lazima uonekane kupitia vitendo.",
+statRegions:"Mikoa katika mfumo wa kitaifa wa programu",
+statSchools:"Shule za majaribio zinazopendekezwa Pemba",
+statMonths:"Miezi inayopendekezwa ya mradi",
+statBudget:"Bajeti elekezi ya mradi kwa TSh",
+visionKicker:"Dira Yetu",visionTitle:"Mfumo wa kitaifa unaojengwa kutokana na hali halisi ya maeneo.",
+visionText:"Tunalenga kuunganisha ushahidi wa shule, elimu jumuishi, ushiriki wa jamii na utekelezaji wenye uwajibikaji.",
+visionCard1:"Fursa Sawa",visionCard1Text:"Kupunguza vikwazo vinavyozuia watoto kupata, kuhudhuria na kushiriki katika elimu bora.",
+visionCard2:"Shule Jumuishi",visionCard2Text:"Kukuza miundombinu inayofikika, mbinu za ufundishaji jumuishi na msaada unaofaa wa kujifunza.",
+visionCard3:"Ushahidi na Utafiti",visionCard3Text:"Kutumia tathmini za kuaminika, viashiria wazi na matokeo yaliyoandikwa katika kufanya maamuzi.",
+visionCard4:"Ubunifu",visionCard4Text:"Kuchunguza teknolojia za vitendo, vifaa saidizi na suluhisho za kujifunzia zinazolingana na mahitaji ya maeneo.",
+visionCard5:"Ushiriki wa Jamii",visionCard5Text:"Kutambua familia, walimu, watoto na watu wenye ulemavu kama washiriki muhimu.",
+visionCard6:"Uwajibikaji",visionCard6Text:"Kufuatilia rasilimali, utekelezaji, matokeo na changamoto kupitia taarifa zilizo wazi.",
+priorityKicker:"Vipaumbele vya Programu",priorityTitle:"Vipaumbele sita vinavyounganisha mabadiliko.",
+priorityText:"Kila kipaumbele kitaongozwa na tathmini za shule na mahitaji halisi ya jamii zinazoshiriki.",
+p1Title:"Elimu Jumuishi",p1Text:"Kusaidia ushiriki na ujifunzaji wa watoto wenye uwezo na mahitaji mbalimbali ya kujifunza.",
+p2Title:"Miundombinu Rafiki na WASH",p2Text:"Kutathmini njia panda, njia za kupita, madarasa, vyoo vinavyofikika, maji safi na mazingira salama ya shule.",
+p3Title:"Maendeleo ya Walimu",p3Text:"Kuimarisha ufundishaji jumuishi, usimamizi wa darasa, utambuzi wa mahitaji ya ujifunzaji na ujuzi wa vitendo wa kufundisha.",
+p4Title:"Teknolojia Saidizi",p4Text:"Kuchunguza vifaa saidizi vinavyofaa, nyenzo za kujifunzia zinazofikika na zana za kidijitali zinazotumika kwa uwajibikaji.",
+p5Title:"Ujifunzaji wa Msingi",p5Text:"Kukuza stadi za awali za kusoma, kuhesabu, tathmini ya ujifunzaji na msaada kwa watoto walio katika hatari ya kubaki nyuma.",
+p6Title:"Ulinzi na Ushiriki wa Mtoto",p6Text:"Kukuza ulinzi wa mtoto, mifumo salama ya kutoa taarifa, ushiriki wa watoto na uhusiano imara kati ya shule na jamii.",
+pembaKicker:"Awamu ya Kwanza • Pemba, Zanzibar",pembaTitle:"Programu ya Mabadiliko ya Shule Jumuishi Pemba.",
+pembaText:"Mradi wa majaribio unaopendekezwa wa miezi 12 katika shule tano za msingi. Awamu ya kwanza itatathmini upatikanaji wa elimu, miundombinu, ujumuishi wa watu wenye ulemavu, maendeleo ya walimu na ulinzi wa mtoto.",
+district1:"Micheweni",district2:"Wete",district3:"Chake Chake",district4:"Mkoani",
+districtLabel:"Wilaya ya kiutawala ya Pemba",
+schoolTitle:"Mfumo wa majaribio ya shule tano",
+schoolText:"Shule tano zitachaguliwa baada ya uhakiki, mashauriano na tathmini ya awali.",
+schoolPlaceholder:"Utambulisho wa shule utathibitishwa",
+schoolNote:"Hakuna shule inayowasilishwa kama mshiriki aliyeidhinishwa. Majina, maeneo na ushiriki vitachapishwa baada ya uhakiki na makubaliano yanayofaa.",
+roadKicker:"Mfumo wa Utekelezaji",roadTitle:"Safari iliyopangwa ya miezi 12.",
+roadText:"Mfuatano huu unapendekezwa na unategemea upatikanaji wa fedha, vibali, ruhusa za kuingia na tathmini za shule.",
+phase1Title:"Miezi 1–2: Maandalizi na Tathmini ya Awali",
+phase1Text:"Kuthibitisha shule, kufanya mashauriano na jamii, kutathmini ufikikaji, kuweka viashiria vya awali na kuthibitisha taratibu za utekelezaji.",
+phase2Title:"Miezi 3–4: Mipango na Kuimarisha Uwezo",
+phase2Text:"Kuandaa mipango ya kuboresha shule, kupanga vipaumbele na kuwaandaa walimu na timu za utekelezaji.",
+phase3Title:"Miezi 5–8: Utekelezaji",
+phase3Text:"Kutekeleza maboresho ya shule yaliyoidhinishwa, msaada wa ujifunzaji jumuishi, maendeleo ya walimu na rasilimali saidizi zinazofaa.",
+phase4Title:"Miezi 9–10: Ufuatiliaji na Marekebisho",
+phase4Text:"Kupitia maendeleo, kuandika changamoto, kukusanya maoni na kufanya marekebisho yanayotegemea ushahidi.",
+phase5Title:"Miezi 11–12: Tathmini na Taarifa",
+phase5Text:"Kutathmini matokeo, kuchapisha taarifa inayofaa, kuandika mafunzo na kuandaa mapendekezo ya upanuzi wa baadaye.",
+budgetKicker:"Mfumo Elekezi wa Rasilimali",budgetTitle:"Bajeti wazi ya majaribio ya TSh milioni 50.",
+budgetText:"Mgawanyo wa awali wa mipango kwa ajili ya majadiliano na maandalizi ya kutafuta fedha. Si ruzuku iliyopatikana wala taarifa ya matumizi.",
+budgetTotalLabel:"Mahitaji ya jumla yanayopendekezwa",
+budgetStatus:"Makadirio • Fedha hazijapatikana bado",
+budgetTotalText:"Mgawanyo wa mwisho utategemea mahitaji ya shule yaliyothibitishwa, tathmini za kitaalamu, bei na masharti ya wafadhili.",
+b1:"Ufikikaji wa shule na miundombinu midogo",
+b2:"Maji, usafi na mazingira salama ya kujifunzia",
+b3:"Maendeleo na mafunzo ya walimu",
+b4:"Teknolojia saidizi na nyenzo za kujifunzia",
+b5:"Tathmini, ufuatiliaji na upimaji wa matokeo",
+b6:"Ulinzi wa mtoto na ushiriki wa jamii",
+b7:"Uratibu na usimamizi wa programu",
+budgetGrandTotal:"JUMLA",
+budgetNote:"Haya ni makadirio ya mipango, si bei zilizothibitishwa sokoni. Bajeti ya mwisho itathibitishwa kwa tathmini halisi za shule na nyaraka za manunuzi.",
+nationalKicker:"Mfumo wa Upanuzi wa Kitaifa",
+nationalTitle:"Dira moja ya kitaifa. Njia 31 za kimkoa.",
+nationalText:"Mfumo umeandaliwa tangu mwanzo kujumuisha mikoa yote 31, huku kila mkoa ukiwa na tathmini yake, kumbukumbu za programu, bajeti na hali ya utekelezaji.",
+regionPlaceholder:"Tafuta jina la mkoa...",regionCount:"Mikoa 31 ya kiutawala",
+mapTitle:"Taarifa za kijiografia na ramani",
+mapLabel:"Tanzania: mfumo wa programu wa mikoa 31",
+mapText:"Ramani rasmi ya mipaka ya kiutawala itatumika pale data za chanzo zitakapothibitishwa na ruhusa zinazofaa za matumizi kupatikana. Alama za mwelekeo hazipaswi kuchukuliwa kuwa mipaka rasmi au maeneo yaliyothibitishwa ya shule.",
+mapSource:"Rejea ya kiutawala: Ofisi ya Taifa ya Takwimu na vyanzo husika rasmi vya serikali.",
+dashboardKicker:"Ufuatiliaji wa Programu",dashboardTitle:"Mzunguko wa programu ulio wazi.",
+dashboardText:"Kila programu ya mkoa itapitia hatua zilizoainishwa zinazoungwa mkono na ushahidi na maamuzi yaliyoandikwa.",
+status1:"Imependekezwa",status1Text:"Wazo au dhana ya programu inayosubiri tathmini.",
+status2:"Imetathminiwa",status2Text:"Tathmini ya ushahidi na mahitaji imekamilika.",
+status3:"Inaendelea",status3Text:"Utekelezaji umeidhinishwa rasmi na unaendelea.",
+status4:"Imekamilika",status4Text:"Utekelezaji umekamilika na matokeo yameandikwa.",
+dashboardNote:"Huu ni mfumo wa programu, si kanzidata ya taarifa za moja kwa moja. Hakuna mkoa au shule itakayoitwa inaendelea au imekamilika bila kumbukumbu zilizothibitishwa.",
+govKicker:"Imani na Uwajibikaji",govTitle:"Maendeleo lazima yajengwe juu ya uadilifu.",
+govText:"Taratibu zilizo wazi, ulinzi na usimamizi wa rasilimali kwa uwajibikaji ni muhimu kwa utekelezaji unaoaminika.",
+gov1:"Uhuru wa Kitaasisi",gov1Text:"Zanzibar Horizon inawasilishwa kama mpango huru. Haidai kuungwa mkono na serikali, kuwa na uhusiano wa kisiasa au kuwa imeidhinishwa na taasisi nyingine.",
+gov2:"Uwajibikaji wa Fedha",gov2Text:"Fedha zilizopokelewa, matumizi, manunuzi, nyaraka saidizi na bajeti za programu zinapaswa kurekodiwa na kuripotiwa ipasavyo.",
+gov3:"Ulinzi wa Mtoto",gov3Text:"Usalama wa mtoto, faragha, ridhaa inayofahamu, ushiriki salama na taratibu zinazofaa za kutoa taarifa lazima ziongoze shughuli zote za shule.",
+gov4:"Ujumuishi wa Watu Wenye Ulemavu",gov4Text:"Watu wenye ulemavu, mashirika yao ya uwakilishi na familia husika wanapaswa kushiriki kikamilifu katika kubuni na kupitia programu.",
+gov5:"Ushahidi na Uhakiki",gov5Text:"Madai kuhusu shule, wanufaika, ushirikiano, mafanikio na matumizi ya fedha lazima yaungwe mkono na kumbukumbu za kuaminika.",
+gov6:"Uadilifu wa Manunuzi",gov6Text:"Maamuzi ya ununuzi yanapaswa kufuata taratibu zilizoandikwa, uchaguzi wa haki wa wasambazaji na masharti ya wafadhili.",
+safeguardTitle:"Dhamira ya maendeleo yenye uwajibikaji",
+safeguardText:"Hakuna mtoto anayepaswa kuathiriwa na unyonyaji, ubaguzi, upigaji picha usiofaa, ushiriki usio salama au matumizi mabaya ya taarifa binafsi kwa kisingizio cha maendeleo.",
+fundKicker:"Uhamasishaji wa Rasilimali",fundTitle:"Kujenga ushirikiano wa ufadhili wenye uwajibikaji.",
+fundText:"Zanzibar Horizon inalenga kuandaa mapendekezo ya ufadhili yanayoaminika na yanayotegemea ushahidi, na kuchunguza ushirikiano unaofaa kwa elimu jumuishi na maendeleo ya jamii.",
+fund1:"Misingi ya Kimataifa",fund1Text:"Kuchunguza misingi inayosaidia upatikanaji wa elimu, ujumuishi wa watu wenye ulemavu, maendeleo ya watoto na mabadiliko ya jamii.",
+fund2:"Ufadhili wa Balozi na Serikali Rafiki",fund2Text:"Kufuatilia ruzuku ndogo za balozi na programu za maendeleo baina ya nchi zinazokidhi vigezo.",
+fund3:"Ushirikiano wa Kampuni na Wadau wa Ndani",fund3Text:"Kuchunguza uwekezaji wa kijamii wa kampuni na ushirikiano wa kitaalamu wenye uwajibikaji.",
+fundNote:"Hakuna tuzo ya ufadhili, ushirikiano na mfadhili, idhini ya ruzuku au ahadi ya kifedha inayowasilishwa hapa kama iliyopatikana. Kila fursa lazima ithibitishwe kwa masharti rasmi ya mfadhili.",
+researchKicker:"Maarifa na Ujifunzaji",researchTitle:"Utafiti unaoongoza vitendo.",
+researchText:"Programu itajitahidi kujenga msingi wa ushahidi wa vitendo kuhusu upatikanaji wa elimu, utayari wa shule, ujumuishi wa watu wenye ulemavu, ujifunzaji wa msingi na mahitaji ya jamii.",
+research1:"Tathmini za Shule",research1Text:"Kurekodi miundombinu, mazingira ya ujifunzaji, ufikikaji na vipaumbele vya shule.",
+research2:"Matokeo ya Ujifunzaji",research2Text:"Kuandaa viashiria vinavyofaa vya kusoma, kuhesabu, mahudhurio na ushiriki.",
+research3:"Ushahidi wa Jamii",research3Text:"Kujumuisha uzoefu wa walimu, familia, wanafunzi na mashirika ya watu wenye ulemavu.",
+contactKicker:"Ushirikishwaji",contactTitle:"Shiriki katika mazungumzo kuhusu elimu jumuishi.",
+contactText:"Tunakaribisha ushiriki wenye kujenga kutoka kwa walimu, watafiti, mashirika ya jamii, watetezi wa watu wenye ulemavu na wadau watarajiwa wa maendeleo.",
+contactSub:"Taarifa rasmi za mawasiliano",
+contactInfo:"Taarifa rasmi za mawasiliano zitachapishwa baada ya kuthibitishwa. Tovuti hii haiwasilishi anwani ya posta, namba ya simu au barua pepe isiyothibitishwa kama ofisi iliyoanzishwa.",
+footerAbout:"Mpango huru unaoendeleza elimu jumuishi, utafiti, ubunifu na maendeleo ya jamii.",
+footerTagline:"Elimu. Ujumuishi. Fursa.",footerExplore:"Fahamu Zaidi",
+footerPrinciples:"Kanuni Zetu",
+copyright:"Mpango huru. Haki zote zimehifadhiwa. Taarifa za programu zinategemea uhakiki na maendeleo."
+}
 };
 
-/* =========================================================
- 3. TRANSLATION FUNCTION
-========================================================= */
+/* ==========================================
+   NATIONAL ADMINISTRATIVE REGIONS
+   26 Mainland + 5 Zanzibar = 31
+========================================== */
 
-function translateText(value, language) {
- if (language === "en") return value;
+const regions = [
+["Arusha","Mainland","Arusha"],
+["Dar es Salaam","Mainland","Dar es Salaam"],
+["Dodoma","Mainland","Dodoma"],
+["Geita","Mainland","Geita"],
+["Iringa","Mainland","Iringa"],
+["Kagera","Mainland","Kagera"],
+["Katavi","Mainland","Katavi"],
+["Kigoma","Mainland","Kigoma"],
+["Kilimanjaro","Mainland","Kilimanjaro"],
+["Lindi","Mainland","Lindi"],
+["Manyara","Mainland","Manyara"],
+["Mara","Mainland","Mara"],
+["Mbeya","Mainland","Mbeya"],
+["Morogoro","Mainland","Morogoro"],
+["Mtwara","Mainland","Mtwara"],
+["Mwanza","Mainland","Mwanza"],
+["Njombe","Mainland","Njombe"],
+["Pwani","Mainland","Coast"],
+["Rukwa","Mainland","Rukwa"],
+["Ruvuma","Mainland","Ruvuma"],
+["Shinyanga","Mainland","Shinyanga"],
+["Simiyu","Mainland","Simiyu"],
+["Singida","Mainland","Singida"],
+["Songwe","Mainland","Songwe"],
+["Tabora","Mainland","Tabora"],
+["Tanga","Mainland","Tanga"],
+["Kaskazini Pemba","Zanzibar","Pemba North"],
+["Kusini Pemba","Zanzibar","Pemba South"],
+["Kaskazini Unguja","Zanzibar","Unguja North"],
+["Kusini Unguja","Zanzibar","Unguja South"],
+["Mjini Magharibi","Zanzibar","Urban West"]
+];
 
- const clean = String(value).trim();
+/* ==========================================
+   LANGUAGE ENGINE
+========================================== */
 
- return translations[clean] || value;
-}
-
-/* =========================================================
- 4. TRANSLATE THE COMPLETE STATIC INTERFACE
-========================================================= */
-
-function translateInterface(root) {
- const container = root || document.body;
-
- /* Translate ordinary text nodes */
-
- const walker = document.createTreeWalker(
-  container,
-  NodeFilter.SHOW_TEXT,
-  null
- );
-
- const textNodes = [];
-
- while (walker.nextNode()) {
-  textNodes.push(walker.currentNode);
- }
-
- textNodes.forEach(node => {
-  const original = node.textContent;
-
-  if (!original.trim()) return;
-
-  if (!node.parentElement) return;
-
-  if (
-   node.parentElement.closest(
-    "script,style,textarea,input,[data-no-translate]"
-   )
-  ) return;
-
-  const translated = translateText(
-   original,
-   currentLanguage
-  );
-
-  node.textContent = translated;
- });
-
- /* Translate placeholders and accessibility labels */
-
- container.querySelectorAll(
-  "[placeholder],[title],[aria-label]"
- ).forEach(element => {
-
-  ["placeholder","title","aria-label"].forEach(attribute => {
-   if (!element.hasAttribute(attribute)) return;
-
-   const original = element.getAttribute(attribute);
-
-   element.setAttribute(
-    attribute,
-    translateText(original,currentLanguage)
-   );
-  });
-
- });
-
- /* Translate option labels */
-
- container.querySelectorAll("option").forEach(option => {
-  if (!option.dataset.originalText) {
-   option.dataset.originalText = option.textContent;
-  }
-
-  option.textContent = translateText(
-   option.dataset.originalText,
-   currentLanguage
-  );
- });
-
-}
-
-/* =========================================================
- 5. BILINGUAL LANGUAGE SWITCHER
-========================================================= */
-
-function createLanguageSwitcher() {
-
- let switcher = document.getElementById(
-  "zanzihorizonLanguageSwitcher"
- );
-
- if (switcher) return;
-
- switcher = document.createElement("div");
-
- switcher.id = "zanzihorizonLanguageSwitcher";
- switcher.className = "language-switcher";
-
- switcher.innerHTML = `
-  <button type="button" data-language="en">
-   EN
-  </button>
-  <button type="button" data-language="sw">
-   SW
-  </button>
- `;
-
- document.body.appendChild(switcher);
-
- switcher.addEventListener("click",function(event) {
-
-  const button = event.target.closest(
-   "[data-language]"
-  );
-
-  if (!button) return;
-
-  setLanguage(button.dataset.language);
-
- });
-
- updateLanguageSwitcher();
-}
-
-function updateLanguageSwitcher() {
-
- const switcher = document.getElementById(
-  "zanzihorizonLanguageSwitcher"
- );
-
- if (!switcher) return;
-
- switcher.querySelectorAll("button").forEach(button => {
-
-  const active =
-   button.dataset.language === currentLanguage;
-
-  button.classList.toggle("active",active);
-  button.setAttribute("aria-pressed",String(active));
-
- });
-
-}
+let currentLanguage = "en";
 
 function setLanguage(language) {
+  currentLanguage = language;
+  document.documentElement.lang = language;
+  const dictionary = translations[language];
 
- if (!["en","sw"].includes(language)) return;
-
- currentLanguage = language;
-
- localStorage.setItem(
-  APP_CONFIG.languageKey,
-  language
- );
-
- document.documentElement.lang =
-  language === "sw" ? "sw" : "en";
-
- translateInterface(document.body);
-
- updateLanguageSwitcher();
-
- window.dispatchEvent(
-  new CustomEvent("zanzihorizon:languagechange",{
-   detail:{language:language}
-  })
- );
-
-}
-
-/* =========================================================
- 6. APPLICATION DATA STORAGE
-========================================================= */
-
-function loadDatabase() {
-
- try {
-
-  database = JSON.parse(
-   localStorage.getItem(APP_CONFIG.storageKey) || "{}"
-  );
-
- } catch(error) {
-
-  console.error("Database loading error:",error);
-  database = {};
-
- }
-
- Object.keys(TABLES).forEach(key => {
-
-  if (!Array.isArray(database[key])) {
-   database[key] = [];
-  }
-
- });
-
-}
-
-function saveDatabase() {
-
- try {
-
-  localStorage.setItem(
-   APP_CONFIG.storageKey,
-   JSON.stringify(database)
-  );
-
-  return true;
-
- } catch(error) {
-
-  console.error("Database saving error:",error);
-
-  alert(
-   currentLanguage === "sw"
-    ? "Imeshindikana kuhifadhi taarifa."
-    : "Unable to save data."
-  );
-
-  return false;
-
- }
-
-}
-
-/* =========================================================
- 7. SECURITY AND FORMATTING
-========================================================= */
-
-function escapeHTML(value) {
-
- return String(value ?? "").replace(
-  /[&<>"']/g,
-  character => ({
-   "&":"&amp;",
-   "<":"&lt;",
-   ">":"&gt;",
-   '"':"&quot;",
-   "'":"&#39;"
-  })[character]
- );
-
-}
-
-function formatMoney(value) {
-
- return Number(value || 0).toLocaleString(
-  currentLanguage === "sw" ? "sw-TZ" : "en-TZ",
-  {
-   minimumFractionDigits:0,
-   maximumFractionDigits:2
-  }
- );
-
-}
-
-function displayValue(value) {
-
- const text = String(value ?? "");
-
- return escapeHTML(
-  translateText(text,currentLanguage)
- );
-
-}
-
-/* =========================================================
- 8. REGISTER TABLES
-========================================================= */
-
-const tableFields = {
-
- baseline:[
-  "school","indicator","value","period","status"
- ],
-
- budget:[
-  "school","year","category",
-  "allocated","spent","balance","approval"
- ],
-
- expenditure:[
-  "school","date","category",
-  "amount","reference","status"
- ],
-
- document:[
-  "school","title","category",
-  "reference","date","status"
- ],
-
- report:[
-  "school","type","period",
-  "preparedBy","status"
- ],
-
- performance:[
-  "school","domain","indicator",
-  "baseline","current","target","status"
- ],
-
- improvement:[
-  "school","priority","objective",
-  "responsible","endDate","budget","status"
- ]
-
-};
-
-function renderTable(type) {
-
- const tbody = document.getElementById(TABLES[type]);
-
- if (!tbody) return;
-
- const fields = tableFields[type];
-
- tbody.innerHTML = database[type].map(
-  (record,index) => {
-
-   const cells = fields.map(field => {
-
-    let value = record[field] ?? "";
-
-    if (
-     ["allocated","spent","balance",
-      "amount","budget"].includes(field)
-    ) {
-
-     value = formatMoney(value);
-
-     return `<td>${escapeHTML(value)}</td>`;
-
+  document.querySelectorAll("[data-i]").forEach(element => {
+    const key = element.dataset.i;
+    if (dictionary[key] !== undefined) {
+      element.textContent = dictionary[key];
     }
+  });
 
-    return `<td>${displayValue(value)}</td>`;
+  document.querySelectorAll("[data-placeholder]").forEach(element => {
+    const key = element.dataset.placeholder;
+    if (dictionary[key] !== undefined) {
+      element.placeholder = dictionary[key];
+    }
+  });
 
-   }).join("");
+  document.getElementById("langBtn").textContent =
+    language === "en" ? "KIS" : "ENG";
 
-   return `
-    <tr>
-     ${cells}
-     <td>
-      <button type="button"
-       class="btn"
-       data-delete="${type}"
-       data-index="${index}">
-       ${currentLanguage === "sw" ? "Futa" : "Delete"}
-      </button>
-     </td>
-    </tr>
-   `;
-
-  }
- ).join("");
-
- if (!database[type].length) {
-
-  tbody.innerHTML = `
-   <tr>
-    <td colspan="${fields.length + 1}">
-     ${currentLanguage === "sw"
-      ? "Hakuna taarifa zilizohifadhiwa."
-      : "No records available."}
-    </td>
-   </tr>
-  `;
-
- }
-
+  renderRegions();
 }
 
-function renderAllTables() {
+document.getElementById("langBtn").addEventListener("click", () => {
+  setLanguage(currentLanguage === "en" ? "sw" : "en");
+});
 
- Object.keys(TABLES).forEach(renderTable);
+/* ==========================================
+   REGIONAL DIRECTORY
+========================================== */
 
-}
+function renderRegions() {
+  const grid = document.getElementById("regionGrid");
+  const search = document.getElementById("regionSearch").value
+    .toLowerCase().trim();
 
-/* =========================================================
- 9. BUDGET STATISTICS
-========================================================= */
+  grid.innerHTML = "";
 
-function updateBudgetStatistics() {
-
- const approved = database.budget.filter(
-  item => item.approval === "Approved"
- );
-
- const totalBudget = approved.reduce(
-  (sum,item) =>
-   sum + Number(item.allocated || 0),0
- );
-
- const totalSpent = approved.reduce(
-  (sum,item) =>
-   sum + Number(item.spent || 0),0
- );
-
- const balance = totalBudget - totalSpent;
-
- const statistics = {
-  totalBudget:totalBudget,
-  totalExpenditure:totalSpent,
-  budgetBalance:balance
- };
-
- Object.entries(statistics).forEach(
-  ([id,value]) => {
-
-   const element = document.getElementById(id);
-
-   if (element) {
-    element.textContent = formatMoney(value);
-   }
-
-  }
- );
-
-}
-
-/* =========================================================
- 10. FORM REGISTRATION AND VALIDATION
-========================================================= */
-
-function registerForm(formId,type,transform) {
-
- const form = document.getElementById(formId);
-
- if (!form) return;
-
- if (form.dataset.engineRegistered === "true") return;
-
- form.dataset.engineRegistered = "true";
-
- form.addEventListener("submit",function(event) {
-
-  event.preventDefault();
-
-  if (!form.reportValidity()) return;
-
-  const formData = new FormData(form);
-
-  const record = Object.fromEntries(
-   formData.entries()
+  const filtered = regions.filter(region =>
+    region.join(" ").toLowerCase().includes(search)
   );
 
-  record.id = (
-   window.crypto &&
-   typeof window.crypto.randomUUID === "function"
-  )
-   ? window.crypto.randomUUID()
-   : String(Date.now()) + Math.random();
+  filtered.forEach(region => {
+    const [name,type,description] = region;
+    const item = document.createElement("div");
 
-  record.createdAt = new Date().toISOString();
+    item.className = "region " + (type === "Zanzibar" ? "zanzibar" : "");
+    const strong = document.createElement("strong");
+    const small = document.createElement("small");
 
-  if (typeof transform === "function") {
-   Object.assign(record,transform(record));
+    strong.textContent = name;
+    small.textContent = type === "Zanzibar"
+      ? (currentLanguage === "en" ? "Zanzibar • " : "Zanzibar • ") + description
+      : (currentLanguage === "en" ? "Tanzania Mainland" : "Tanzania Bara");
+
+    item.appendChild(strong);
+    item.appendChild(small);
+    grid.appendChild(item);
+  });
+
+  if (filtered.length === 0) {
+    const empty = document.createElement("p");
+    empty.textContent = currentLanguage === "en"
+      ? "No matching region found."
+      : "Hakuna mkoa unaolingana na utafutaji.";
+    grid.appendChild(empty);
   }
-
-  database[type].push(record);
-
-  if (!saveDatabase()) {
-   database[type].pop();
-   return;
-  }
-
-  form.reset();
-
-  renderTable(type);
-  updateBudgetStatistics();
-
-  alert(
-   currentLanguage === "sw"
-    ? "Taarifa zimehifadhiwa kikamilifu."
-    : "Record saved successfully."
-  );
-
- });
-
 }
 
-function registerForms() {
+document.getElementById("regionSearch").addEventListener("input", renderRegions);
 
- registerForm("baselineForm","baseline");
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
 
- registerForm(
-  "budgetForm",
-  "budget",
-  record => {
+const menuButton = document.getElementById("menuBtn");
+const navigation = document.getElementById("navlinks");
 
-   const allocated = Number(record.allocated || 0);
-   const spent = Number(record.spent || 0);
+menuButton.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+});
 
-   if (spent > allocated) {
-    alert(
-     currentLanguage === "sw"
-      ? "Matumizi hayawezi kuzidi bajeti iliyotengwa."
-      : "Expenditure cannot exceed the allocated budget."
-    );
-   }
+navigation.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+  });
+});
 
-   return {
-    allocated:allocated,
-    spent:spent,
-    balance:allocated-spent
-   };
+/* ==========================================
+   BACK TO TOP AND INITIALISATION
+========================================== */
 
-  }
- );
+document.getElementById("backtop").addEventListener("click", () => {
+  window.scrollTo({top:0,behavior:"smooth"});
+});
 
- registerForm(
-  "expenditureForm",
-  "expenditure",
-  record => ({
-   amount:Number(record.amount || 0)
-  })
- );
+document.getElementById("year").textContent = new Date().getFullYear();
 
- registerForm("documentForm","document");
- registerForm("reportForm","report");
- registerForm("performanceForm","performance");
+renderRegions();
+setLanguage("en");
 
- registerForm(
-  "improvementForm",
-  "improvement",
-  record => ({
-   budget:Number(record.budget || 0)
-  })
- );
-
-}
-
-/* =========================================================
- 11. DELETE RECORDS
-========================================================= */
-
-function registerDeleteActions() {
-
- document.addEventListener("click",function(event) {
-
-  const button = event.target.closest("[data-delete]");
-
-  if (!button) return;
-
-  const type = button.dataset.delete;
-  const index = Number(button.dataset.index);
-
-  if (
-   !Object.prototype.hasOwnProperty.call(TABLES,type) ||
-   !Number.isInteger(index) ||
-   !database[type][index]
-  ) return;
-
-  const confirmation = currentLanguage === "sw"
-   ? "Una uhakika unataka kufuta taarifa hii?"
-   : "Are you sure you want to delete this record?";
-
-  if (!confirm(confirmation)) return;
-
-  const removed = database[type].splice(index,1)[0];
-
-  if (!saveDatabase()) {
-
-   database[type].splice(index,0,removed);
-   return;
-
-  }
-
-  renderTable(type);
-  updateBudgetStatistics();
-
- });
-
-}
-
-/* =========================================================
- 12. CSV EXPORT
-========================================================= */
-
-function exportCSV(type) {
-
- if (!database[type]) return;
-
- if (!database[type].length) {
-
-  alert(
-   currentLanguage === "sw"
-    ? "Hakuna taarifa za kuhamisha."
-    : "There are no records to export."
-  );
-
-  return;
-
- }
-
- const headers = Object.keys(database[type][0]);
-
- const rows = [
-  headers,
-  ...database[type].map(record =>
-   headers.map(header => record[header] ?? "")
-  )
- ];
-
- const csv = rows.map(row =>
-  row.map(value =>
-   '"' + String(value).replace(/"/g,'""') + '"'
-  ).join(",")
- ).join("\r\n");
-
- const blob = new Blob(
-  ["\uFEFF" + csv],
-  {type:"text/csv;charset=utf-8;"}
- );
-
- const url = URL.createObjectURL(blob);
-
- const link = document.createElement("a");
-
- link.href = url;
- link.download =
-  "zanzihorizon-" + type + ".csv";
-
- document.body.appendChild(link);
-
- link.click();
- link.remove();
-
- URL.revokeObjectURL(url);
-
-}
-
-/* =========================================================
- 13. TRANSLATION SUPPORT FOR CUSTOM HOMEPAGE CONTENT
-========================================================= */
-
-/*
- Add data-i18n="homeTitle" to custom HTML elements
- and add the matching key to translations.
-
- Example:
- <h1 data-i18n="homeTitle">Welcome to Zanzibar Horizon</h1>
-
- The following dictionary supports additional keys.
-*/
-
-const customTranslations = {
-
- homeTitle:{
-  en:"Welcome to Zanzibar Horizon",
-  sw:"Karibu Zanzibar Horizon"
- },
-
- homeSubtitle:{
-  en:"Education, Institutional Intelligence and Development",
-  sw:"Elimu, Taarifa za Taasisi na Maendeleo"
- },
-
- heroButton:{
-  en:"Explore the Platform",
-  sw:"Chunguza Mfumo"
- },
-
- dashboardWelcome:{
-  en:"Welcome to the Command Centre",
-  sw:"Karibu katika Kituo Kikuu cha Udhibiti"
- }
-
-};
-
-function translateCustomElements() {
-
- document.querySelectorAll("[data-i18n]").forEach(
-  element => {
-
-   const key = element.dataset.i18n;
-   const entry = customTranslations[key];
-
-   if (entry && entry[currentLanguage]) {
-    element.textContent = entry[currentLanguage];
-   }
-
-  }
- );
-
-}
-
-/* =========================================================
- 14. PUBLIC APPLICATION INTERFACE
-========================================================= */
-
-window.ZanzibarHorizon = {
-
- setLanguage:setLanguage,
-
- getLanguage:function() {
-  return currentLanguage;
- },
-
- translate:function(text) {
-  return translateText(text,currentLanguage);
- },
-
- exportCSV:exportCSV,
-
- renderAllTables:renderAllTables,
-
- updateBudgetStatistics:updateBudgetStatistics,
-
- getData:function(type) {
-
-  if (!database[type]) return [];
-
-  return JSON.parse(JSON.stringify(database[type]));
-
- },
-
- saveDatabase:saveDatabase
-
-};
-
-/* =========================================================
- 15. INITIALISE APPLICATION
-========================================================= */
-
-function initialiseZanziHorizon() {
-
- loadDatabase();
-
- createLanguageSwitcher();
-
- translateInterface(document.body);
-
- translateCustomElements();
-
- registerForms();
-
- registerDeleteActions();
-
- renderAllTables();
-
- updateBudgetStatistics();
-
- updateLanguageSwitcher();
-
- console.log(
-  "ZanziHorizon Nexus bilingual application initialised."
- );
-
-}
-
-if (document.readyState === "loading") {
-
- document.addEventListener(
-  "DOMContentLoaded",
-  initialiseZanziHorizon,
-  {once:true}
- );
-
-} else {
-
- initialiseZanziHorizon();
-
-}
-
-})();
 </script>
-
-<!-- =========================================================
- END OF PART 6
- ZANZIHORIZON NEXUS
-========================================================= -->
-
 </body>
 </html>
